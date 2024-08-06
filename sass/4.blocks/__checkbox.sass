@@ -33,3 +33,15 @@
 
   &:checked + div::before
     background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='15' height='15' rx='2' fill='%23F472B6'/%3E%3Crect width='15' height='15' rx='2' stroke='%23F472B6'/%3E%3C/svg%3E%0A")
+
+
+
+
+  &--second
+    & + div:before
+      border: 2px solid $white
+      background-color: $transparent
+
+
+    &:checked + div::before
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='9' viewBox='0 0 12 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4.5L4.5 8L11 1.5' stroke='%23F5F3FF' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")

@@ -10,13 +10,13 @@
   @extend %transition
 
   &.fixed
-    background-color: $white
-
-    .header__nav-item
-      color: $blue-light !important
+    background: rgba(255, 255, 255, 0.30)
+    backdrop-filter: blur(22px)
 
   a
     color: $white
+    &:hover
+      color: $blue-light
 
   &__wrap
     height: 125px

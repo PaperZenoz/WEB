@@ -46,14 +46,15 @@ $(document).ready(function () {
         $('.general-interior__slider').slick({
             centerMode: true
         })
-
         $('.general-reviews-slider').slick({
             centerMode: true,
+            slidesToShow: 1.7,
             responsive: [
                 {
                     breakpoint: 1920,
                     settings: {
-                        centerMode: false
+                        centerMode: false,
+                        slidesToShow: 1
                     }
                 }
             ]
@@ -66,7 +67,7 @@ $(document).ready(function () {
 
             if ($(window).width() <= 1024) {
                 $slider.slick()
-            } else if ($(window).width() >= 1024 && $slider.hasClass('slick-initialized')){
+            } else if ($(window).width() >= 1024 && $slider.hasClass('slick-initialized')) {
                 $slider.slick('unslick')
             }
         }
@@ -74,14 +75,21 @@ $(document).ready(function () {
 
         function general_banner() {
             $('.general-banner-slider').slick({
-                arrows: false,
+                arrows: true,
                 dots: true,
-                adaptiveHeight: true
+                adaptiveHeight: true,
+                infinite: false,
+                responsive: [
+                    {
+                        breakpoint: 1280,
+                        settings: {
+                            arrows: false
+                        }
+                    }
+                ]
             })
 
         }
-
-
 
 
         love_slider()
@@ -123,8 +131,13 @@ $(document).ready(function () {
     }
 
 
+    function why_parallax() {
 
 
+        $(window).on("scroll", function () {
+            $('.general-why__img').css("background-position-y", $(window).scrollTop() * 0.2);
+        })
+    }
 
 
     $('.politic').parallax({imageSrc: 'images/politic/bg.svg', speed: 1.5});
@@ -137,16 +150,16 @@ $(document).ready(function () {
     // $('.general-diary').parallax({imageSrc: 'images/general-diary/bg.svg', speed: 1.5, zIndex: 100 });
     // $('.general-about').parallax({imageSrc: 'images/general-about/bg.svg', speed: 1.5, zIndex: 100 });
 
-    
-    
+
+    // $('.general-why__img').parallax({imageSrc: 'images/general-why/1.svg', speed: 1.5});
+
+
     function school_blur() {
 
 
-
-
         $('.school__right').find('strong').on('click', function () {
-                $(this).css( "filter", "blur(0px)" );
-            })
+            $(this).css("filter", "blur(0px)");
+        })
     }
 
     questions()
@@ -156,5 +169,6 @@ $(document).ready(function () {
     love_contacts()
     burger()
     school_blur()
+    why_parallax()
 
 })
