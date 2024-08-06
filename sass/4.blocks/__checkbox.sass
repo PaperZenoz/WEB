@@ -1,0 +1,35 @@
+.checkbox
+  position: absolute
+  z-index: -1
+  opacity: 0
+  width: auto
+  margin-bottom: 10px
+
+  & + div
+    align-items: center
+    user-select: none
+    position: relative
+    cursor: pointer
+    padding-left: 35px
+
+
+
+  & + div:before
+    position: absolute
+    left: 0
+    top: 0px
+    content: ''
+    display: inline-block
+    width: 20px
+    height: 20px
+    @include r(5px)
+    flex-shrink: 0
+    flex-grow: 0
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: 60% 60%
+    background-color: white
+    border: 2px solid $pink
+
+  &:checked + div::before
+    background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='15' height='15' rx='2' fill='%23F472B6'/%3E%3Crect width='15' height='15' rx='2' stroke='%23F472B6'/%3E%3C/svg%3E%0A")

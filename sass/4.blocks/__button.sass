@@ -1,0 +1,68 @@
+.btn
+  height: 110px
+  min-width: 400px
+  width: max-content
+  border: 1px solid $transparent
+  line-height: 110px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  transition: all ease .3s
+  font-size: clamp(0.875rem, calc(0.8rem + 0.38vw), 1.25rem)
+  background: $violet
+  color: $yellow
+  cursor: pointer
+  padding: 0 15px
+  border-radius: 100px
+  @extend %font
+  @extend %up
+  @media screen and (max-width: 1023px)
+    height: 80px
+    min-width: 100%
+    font-size: 20px
+  @media screen and (max-width: 767px)
+    font-size: 12px
+    height: 50px
+
+
+
+
+
+  &--pink
+    background-color: $pink
+
+
+  &--orange
+    color: white
+    background-color: #FFBF85
+
+  &--yellow
+    background-color: $yellow
+    color: $violet
+    @extend %transition
+    &:hover
+      background: $violet
+      color: $yellow
+
+
+  &--yellow-second
+    background-color: $yellow
+    color: $violet
+    @extend %transition
+    &:hover
+      background: $pink
+      color: $yellow
+
+
+  &--shadow
+    box-shadow: 15px 15px 0px -5px rgba(#A78BFA, 1)
+    @extend %transition
+    &:hover
+      box-shadow: 15px 15px 0px -5px rgba(#A78BFA, 0)
+
+
+  &--shadow-second
+    box-shadow: 15px 15px 0px -5px rgba($pink, 1)
+    @extend %transition
+    &:hover
+      box-shadow: 15px 15px 0px -5px rgba($pink, 0)

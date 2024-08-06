@@ -1,0 +1,68 @@
+{% set page = { title: 'Дневник модели', background: 'diary' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+    <div class="container">
+        <div class="breadcrumbs">
+            {% set  list = [
+                'Wmodels',
+                'Дневник модели'] %}
+
+            {% for item in list %}
+                <a href="#" class="breadcrumbs__link">
+                    {{ item }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    
+    {% set  _ = 'diary' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                {% set  list = [
+                    'ДНЕВНИК МОДЕЛИ',
+                    'Как я решила работать дома',
+                    'ДНЕВНИК МОДЕЛИ',
+                    'ДНЕВНИК МОДЕЛИ']
+                %}
+
+                {% for item in list %}
+                    <div class="{{_}}__item">
+                        <div class="{{_}}__photo">
+                            <div class="{{_}}__img img">
+                                <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+
+                            </div>
+
+                        </div>
+                        <div class="{{_}}__info">
+                            <div class="{{_}}__title h1 color--yellow">
+                                {{ item }}
+                            </div>
+                            <div class="{{_}}__text">
+                                Реальные истории о жизни, работе, отношениях: как я попала в вебкам, как я влюбилась в клиента, как родители узнали о моей работе. Каждая история эмоция и мой опыт.                            </div>
+
+                            <a href="#" class="btn btn--yellow-second btn--shadow">Читать истории</a>
+
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+
+
+
+    
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock content %}

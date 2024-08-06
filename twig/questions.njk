@@ -1,0 +1,64 @@
+{% set page = { title: 'FAQ', background: 'questions' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+    <div class="container">
+        <div class="breadcrumbs">
+            {% set  list = [
+                'Wmodels',
+                'FAQ'] %}
+
+            {% for item in list %}
+                <a href="#" class="breadcrumbs__link">
+                    {{ item }}
+                </a>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+
+    
+    {% set  _ = 'questions' %}
+    <div class="{{ _ }}">
+        <div class="container">
+            <h1 class="h1 color--pink">ЧАСТО <br> ЗАДАВАЕМЫЕ <br> ВОПРОСЫ</h1>
+            <div class="{{ _ }}__wrap">
+                
+                {% set  list = [
+                    'Надо знать английский?',
+                    'Как начать работать?',
+                    'А сколько можно зарабатывать?',
+                    'Какой график работы?',
+                    'Нужна ли модельная внешность?',
+                    'Это, наверное, сложно?',
+                    'Меня могут увидеть знакомые?',
+                    'Вебкам – это анонимная работа?',
+                    'Как долго работает ваша студия в Новосибирске?',
+                    'Какие преимущества работы веб-моделью?']
+                %}
+                    
+                {% for item in list %}
+                    <div class="{{_}}__item">
+                        <div class="{{_}}__head">
+{{ item }}
+                        </div>
+                        <div class="{{_}}__body">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusamus, culpa enim ipsa necessitatibus quidem rem. Aliquid dolor esse iste quas sunt. Aliquam at molestias quas veritatis? A amet animi cumque dicta dolore molestias ratione recusandae repudiandae sequi voluptates? Architecto itaque, minus nam odio quaerat sunt? Accusantium ad, aliquam amet, architecto aspernatur atque aut consequatur cupiditate debitis eligendi explicabo iste iusto labore minima nisi non odit placeat qui quibusdam quis quisquam quo soluta suscipit temporibus unde! Assumenda consectetur cupiditate earum est et expedita iste molestiae, placeat quam sunt veniam veritatis! Aliquam consequatur cum dolorem ea itaque iusto minus quaerat rerum?
+                        </div>
+
+                    </div>
+                {% endfor %}
+
+
+
+
+    
+            </div>
+            <a href="#" class="btn btn--yellow btn--shadow">Стань моделью</a>
+
+        </div>
+    </div>
+
+{% endblock content %}

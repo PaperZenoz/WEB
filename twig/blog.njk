@@ -1,0 +1,106 @@
+{% set page = { title: 'Блог', background: 'blog' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+    <div class="container">
+        <div class="breadcrumbs">
+            {% set  list = [
+                'Wmodels',
+                'Блог'] %}
+
+            {% for item in list %}
+                <a href="#" class="breadcrumbs__link">
+                    {{ item }}
+                </a>
+            {% endfor %}
+
+
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="h1 color--yellow text-center">Блог</h1>
+    </div>
+
+    {% set  _ = 'blog' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+
+                {% set  list = [{
+                    title: 'Что нужно знать о работе в салонах эротического массажа в Новосибирске: плюсы, минусы, альтернативы.  ',
+                    subtitle: 'Мало кто понимает, что на самом деле представляет собой работа в салоне эротического массажа. Мы расскажем!'
+
+                },    {
+                    title: 'Насколько безопасна и выгодна работа в стриптиз-клубах Новосибирска и есть ли альтернативы?  ',
+                    subtitle: 'Многие девушки считают, работа в стриптиз барах приносит много денег, а также внимание со стороны богатых ухажеров. Так ли это на самом деле?'
+                },   {
+                    title: 'Все что нужно знать о работе в эскорте: подводные камни, заработок, альтернативы в Новосибирске  ',
+                    subtitle: 'Что в действительности представляет собой работа в эскорте? Обсудим в этой статье!'
+                }] %}
+
+                {% for item in list %}
+                    <a href="#" class="{{ _ }}__item">
+                        <div class="{{ _ }}__img img">
+                            <img src="images/{{ _ }}/1.jpg" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__title">
+                            {{ item.title }}
+                        </div>
+                        <div class="{{ _ }}__subtitle">
+                            {{ item.subtitle }}
+                        </div>
+                    </a>
+                {% endfor %}
+
+                {% for item in list %}
+                    <a href="#" class="{{ _ }}__item">
+                        <div class="{{ _ }}__img img">
+                            <img src="images/{{ _ }}/1.jpg" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__title">
+                            {{ item.title }}
+                        </div>
+                        <div class="{{ _ }}__subtitle">
+                            {{ item.subtitle }}
+                        </div>
+                    </a>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% set  _ = 'blog-pagination' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                <a href="#">
+                    <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.2678 0.30551L0.13232 14.2884L14.2678 28.3222L16.9626 25.9832L6.99665 16.068H29.5727V12.4579H7.0475L16.9626 2.64447L14.2678 0.30551Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#" class="active">
+                    <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.4666 0.30551L29.6021 14.2884L15.4666 28.3222L12.7717 25.9832L22.7377 16.068H0.161699V12.4579H22.6869L12.7717 2.64447L15.4666 0.30551Z" fill="white"/>
+                    </svg>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,85 @@
+.background
+  &--violet
+    background: #a78bfa
+
+    &:before
+      content: ''
+      width: 100%
+      height: 300px
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      background: linear-gradient(0deg, #a78bfa, rgba(#f5f3ff, 0.7))
+
+  &--yellow
+    background: #FDE68A
+
+    &:before
+      content: ''
+      width: 100%
+      height: 300px
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      background: linear-gradient(0deg, #FDE68A, rgba(#f5f3ff, 0.5))
+
+  &--pink
+    background: linear-gradient(0deg, $pink, rgba(#FED0EB, 0.5))
+  &--404
+    background-image: url("../../images/not-found/1.jpg")
+    background-size: cover
+    background-position: center
+
+  &--contacts
+    background-image: url("../../images/contacts/1.jpg")
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+  &--questions
+    background-image: url("../../images/questions/1.jpg")
+    background-size: cover
+    background-position: center
+
+  &--blog
+    background-image: url("../../images/blog/2.jpg")
+    background-size: cover
+    background-position: center
+
+  &--school
+    background-image: url("../../images/school/bg.jpg")
+    background-size: cover
+
+
+  &--diary
+    background-image: url("../../images/diary/bg.jpg")
+    background-size: cover
+
+  &--diary-inner
+    background-image: url("../../images/diary-inner/bg.jpg")
+    background-size: cover
+
+  &--general
+    padding-top: 0
+
+  &--politic
+    background-image: url("../../images/politic/1.jpg")
+    background-size: cover
+  &--gallery
+    background-image: url("../../images/gallery/bg.jpg")
+    background-size: cover
+
+  &--vacancy
+    background-image: url("../../images/vacancy/bg.jpg")
+    background-size: cover
+
+  &--secret
+    background-image: url("../../images/secret/bg.svg")
+    background-size: cover
+
+@keyframes parallax
+  to
+    background-position: center bottom 0%
+

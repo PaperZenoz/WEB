@@ -1,0 +1,88 @@
+.custom-slick-arrow
+  .slick-arrow
+    font-size: 0
+    width: 50px
+    height: 50px
+    @include r(50%)
+    border: 1px solid $transparent
+    position: absolute
+    top: 50%
+    z-index: 1
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='%23A78BFA'/%3E%3C/svg%3E%0A")
+    background-color: transparent
+    background-repeat: no-repeat
+    background-size: cover
+    @extend %transition
+    cursor: pointer
+    @media screen and (max-width: 1023px)
+      width: 30px
+      height: 30px
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 -0.000244141C11.225 -0.000244141 0 11.2248 0 24.9998C0 38.7748 11.225 49.9998 25 49.9998C38.775 49.9998 50 38.7748 50 24.9998C50 11.2248 38.775 -0.000244141 25 -0.000244141ZM31.975 26.3248L23.15 35.1498C22.775 35.5248 22.3 35.6998 21.825 35.6998C21.35 35.6998 20.875 35.5248 20.5 35.1498C19.775 34.4248 19.775 33.2248 20.5 32.4998L28 24.9998L20.5 17.4998C19.775 16.7748 19.775 15.5748 20.5 14.8498C21.225 14.1248 22.425 14.1248 23.15 14.8498L31.975 23.6748C32.725 24.3998 32.725 25.5998 31.975 26.3248Z' fill='%23FFFF33'/%3E%3C/svg%3E%0A")
+
+  .slick-next
+    right: -15px
+
+  .slick-prev
+    transform: rotate(180deg)
+    left: -15px
+
+
+  &--white .slick-arrow
+    background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='white'/%3E%3C/svg%3E%0A")
+    @extend %transition
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='%238B5CF6'/%3E%3C/svg%3E%0A")
+
+
+.custom-slick-dots
+  .slick-dots
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+    display: flex
+    gap: 25px
+    bottom: 100px
+    @media screen and (max-width: 1023px)
+      bottom: 30px
+    @media screen and (max-width: 767px)
+      bottom: 10px
+
+
+
+
+
+
+
+
+
+    button
+      font-size: 0
+      width: 14px
+      height: 14px
+      @include r(50%)
+      border: none
+      background-color: $violet
+
+    .slick-active button
+      background-color: $yellow
+
+
+.up-btn
+  width: 50px
+  height: 110px
+  background-image: url("data:image/svg+xml,%3Csvg width='50' height='110' viewBox='0 0 50 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.88985e-05 84.889C2.76887e-05 98.7272 11.225 110.004 25 110.004C38.775 110.004 50 98.7272 50 84.889L50 46.7291C50 46.7291 50 46.729 49.9999 46.729L49.9999 25.1146C49.9999 11.2765 38.775 -8.61072e-06 25 -9.81497e-06C11.225 -1.10192e-05 -6.62778e-06 11.2765 -4.02286e-06 25.1146L-6.21848e-06 50.2296C5.22561e-06 50.2296 2.04844e-05 50.2297 3.19285e-05 50.2297L2.88985e-05 84.889ZM35.15 26.9731L26.325 18.1076C25.6 17.3542 24.4 17.3542 23.675 18.1076L14.85 26.9731C14.125 27.7015 14.125 28.907 14.85 29.6353C15.575 30.3636 16.775 30.3636 17.5 29.6353L25 22.1009L32.5 29.6353C33.225 30.3636 34.425 30.3636 35.15 29.6353C35.525 29.2586 35.7 28.7814 35.7 28.3042C35.7 27.827 35.525 27.3498 35.15 26.9731Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
+  right: 15px
+  bottom: 15px
+  position: fixed
+  z-index: 10
+  display: none
+  @media screen and (max-width: 1023px)
+    width: 30px
+    height: 65px
+    background-size: contain
+  
+  	
+  

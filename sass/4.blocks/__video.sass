@@ -1,0 +1,34 @@
+.video
+  position: relative
+  overflow: hidden
+  cursor: pointer
+
+  &:before
+    content: ''
+    display: block
+    width: 120px
+    height: 120px
+    @include r(50%)
+    background-color: rgba($white, 0.5)
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20.0853V11.6907C0 1.30304 7.83654 -2.9849 17.4071 2.20887L25.1149 6.37597L32.8221 10.5432C42.3926 15.737 42.3926 24.2524 32.8221 29.4461L25.1149 33.6132L17.4071 37.7803C7.83654 42.9741 0 38.7466 0 28.2987V20.0853Z' fill='%23F5F3FF'/%3E%3C/svg%3E%0A")
+    background-position: center
+    background-repeat: no-repeat
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 10
+    @extend %transition
+    @media screen and (max-width: 1279px)
+    	zoom: 0.8
+    
+    	
+    
+
+  &:hover:before
+    background-color: $pink
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20.0853V11.6907C0 1.30304 7.83654 -2.9849 17.4071 2.20887L25.1149 6.37596L32.8221 10.5432C42.3926 15.737 42.3926 24.2524 32.8221 29.4461L25.1149 33.6132L17.4071 37.7803C7.83654 42.9741 0 38.7466 0 28.2987V20.0853Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
+
+
+
+

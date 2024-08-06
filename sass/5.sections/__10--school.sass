@@ -1,0 +1,320 @@
+.school-header
+  color: $white
+  margin-bottom: 115px
+  margin-top: 40px
+  position: relative
+  @media screen and (max-width: 767px)
+    margin-bottom: 60px
+
+
+  &__text
+    width: 520px
+    @media screen and (max-width: 1279px)
+      width: 100%
+
+    .btn
+      min-width: 280px
+      margin-top: 60px
+      @media screen and (max-width: 1279px)
+        width: 100%
+        font-size: 33px
+      @media screen and (max-width: 1023px)
+        font-size: 24px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        margin-top: 30px
+
+
+    .h1
+      white-space: nowrap
+      @media screen and (max-width: 1279px)
+        position: absolute
+        top: 0
+      @media screen and (max-width: 1023px)
+        text-align: left
+        font-size: 40px
+      @media screen and (max-width: 767px)
+        font-size: 20px
+
+
+    p
+      @media screen and (max-width: 1279px)
+        font-size: 32px
+      @media screen and (max-width: 1023px)
+        font-size: 24px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+
+
+  &__img
+    width: 470px
+    height: 470px
+    @include r(40px)
+    box-shadow: 15px 15px 0px -5px rgba($pink, 1)
+
+    img
+      @include r(40px)
+
+    @media screen and (max-width: 1279px)
+      margin-bottom: 60px
+      margin-top: 185px
+    @media screen and (max-width: 1023px)
+      margin-bottom: 40px
+      margin-top: 145px
+    @media screen and (max-width: 767px)
+      width: 290px
+      height: 290px
+      margin-top: 100px
+
+
+  &__wrap
+    @extend %fb
+    @media screen and (max-width: 1279px)
+      flex-direction: column-reverse
+
+
+.school
+
+  &__wrap
+    margin-bottom: 3vw
+
+    @media screen and (max-width: 1279px)
+      margin-bottom: 50px
+
+
+  &__item
+    margin-bottom: 65px
+    display: grid
+    grid-template-columns: 400px auto
+    color: $violet
+    overflow: hidden
+    @extend %lc
+    @media screen and (max-width: 1279px)
+      grid-template-columns: 1fr
+      height: auto !important
+    @media screen and (max-width: 767px)
+      margin-bottom: 35px
+
+
+    &:nth-child(1)
+      height: 580px
+
+    &:nth-child(2)
+      height: 412px
+
+    &:nth-child(3)
+      height: 546px
+
+    &:nth-child(4)
+      height: 292px
+
+    &:nth-child(5)
+      height: 548px
+
+
+  &__left
+    background: linear-gradient(90deg, #ffbf85 0%, #ffb7de 100%)
+    padding: 40px 50px
+    @include r(50px 0 0 50px)
+    position: relative
+    @media screen and (max-width: 1279px)
+      border-radius: 70px 70px 0 0
+      height: 460px
+      padding: 80px 55px
+    @media screen and (max-width: 1023px)
+      height: 344px
+      padding: 40px
+    @media screen and (max-width: 767px)
+      height: 168px
+      padding: 20px 30px
+      border-radius: 25px 25px 0 0
+
+
+  &__right
+    background-color: $white
+    padding: 40px 50px
+    @include r(0px 50px 50px 0px)
+    font-size: clamp(0.875rem, calc(0.8rem + 0.38vw), 1.25rem)
+
+    span
+      display: block
+      margin-left: 20px
+      margin-bottom: 20px
+
+    strong
+      filter: blur(2px)
+      cursor: pointer
+
+    @media screen and (max-width: 1279px)
+      border-radius: 0 0 70px 70px
+      padding: 80px 55px
+      font-size: 32px
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+      padding: 40px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+      padding: 20px 30px
+      border-radius: 0 0 25px 25px
+
+
+    li:before
+      @media screen and (max-width: 1279px)
+        top: 15px
+      @media screen and (max-width: 767px)
+        top: 5px
+        width: 8px
+        height: 8px
+
+
+  &__item-title
+
+    font-size: 25px
+    width: 262px
+    color: $yellow
+    @extend %font
+    @media screen and (max-width: 1279px)
+      font-size: 38px
+      width: 460px
+    @media screen and (max-width: 1023px)
+      font-size: 28px
+    @media screen and (max-width: 767px)
+      font-size: 14px
+      width: 170px
+
+
+  &__num
+    font-size: 120px
+    color: $white
+    position: absolute
+    bottom: 20px
+    right: 20px
+    font-family: "Neue Machina"
+    @media screen and (max-width: 1279px)
+      font-size: 295px
+    @media screen and (max-width: 1023px)
+      font-size: 220px
+    @media screen and (max-width: 767px)
+      font-size: 130px
+
+
+  &__duration
+    position: absolute
+    bottom: 50px
+    left: 50px
+    color: $white
+    @media screen and (max-width: 1279px)
+      font-size: 32px
+      left: 50px
+      bottom: 85px
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+      left: 30px
+      bottom: 20px
+
+
+.school-description
+  color: $white
+  margin-top: 100px
+  @media screen and (max-width: 1439px)
+    margin-top: 120px
+  @media screen and (max-width: 1023px)
+    margin-top: 50px
+
+
+
+
+
+  &__wrap
+    max-width: 700px
+    @media screen and (max-width: 1279px)
+      max-width: 100%
+
+    p
+      @media screen and (max-width: 1279px)
+        font-size: 32px
+      @media screen and (max-width: 1023px)
+        font-size: 24px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+
+
+  .btn
+    color: $violet
+    @media screen and (max-width: 1279px)
+      width: 100%
+      font-size: 33px
+      margin-top: 60px
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      margin-top: 30px
+      font-size: 12px
+      margin-bottom: 50px
+
+
+  &__title
+    @media screen and (max-width: 1023px)
+      text-align: left
+      font-size: 40px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+
+
+.school-popup
+  max-width: 600px
+  background-color: $pink-light
+  @include r(50px)
+  padding: 30px 70px 100px
+  color: $blue
+  text-align: center
+  display: none
+  @media screen and (max-width: 1279px)
+    padding: 30px 25px 100px
+
+
+  &__icon
+    @extend %fc
+    margin-bottom: 30px
+
+  &__text
+    margin-bottom: 50px
+
+  .h2
+    font-size: 30px
+
+  .input
+    margin-bottom: 50px
+
+  .btn
+    height: 80px
+    width: 100%
+
+  .fancybox-close-small
+    right: 25px
+    top: 25px
+
+
+.school-wrap
+  background-image: url("../../images/school/line.png")
+  background-position: bottom 0vw center
+  background-repeat: no-repeat
+  margin-bottom: 10vw
+  @media screen and (max-width: 1919px)
+    background-image: url("../../images/school/line-2.png")
+    //background-position: bottom 0vw center
+  @media screen and (max-width: 1439px)
+    background-image: url("../../images/school/line-3.png")
+    //background-position: bottom 0vw center
+  @media screen and (max-width: 1279px)
+    background-image: none
+
+
+
+
+  	
+  
+  	
+  

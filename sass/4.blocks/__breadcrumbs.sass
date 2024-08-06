@@ -1,0 +1,46 @@
+.breadcrumbs
+  line-height: 1.4
+  display: flex
+  flex-wrap: wrap
+  padding-top: 40px
+  padding-bottom: 60px
+  @extend %fx
+  text-align: center
+  font-size: 20px
+  @media screen and (max-width: 1279px)
+    font-size: 20px
+    justify-content: flex-start
+  @media screen and (max-width: 767px)
+    zoom: 0.8
+
+
+
+
+
+
+
+
+
+  &__link
+    padding-right: 15px
+    margin-right: 40px
+    position: relative
+    color: $blue
+    @extend %rlc
+
+    &:before
+      content: '→'
+      color: $blue
+      width: 25px
+      height: 25px
+      display: block
+      position: absolute
+      right: -25px
+      font-size: 30px
+      line-height: 0.8
+
+    &:last-child
+      color: $blue
+      pointer-events: none
+      &:before
+        display: none

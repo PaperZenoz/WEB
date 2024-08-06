@@ -1,0 +1,90 @@
+
+.header
+  color: $violet
+  position: fixed
+  left: 0
+  right: 0
+  top: 0
+  z-index: 1000
+  background-color: $transparent
+  @extend %transition
+
+  &.fixed
+    background-color: $white
+
+    .header__nav-item
+      color: $blue-light !important
+
+  a
+    color: $white
+
+  &__wrap
+    height: 125px
+    @extend %fy
+    justify-content: space-between
+    //padding: 0 50px
+    @media screen and (max-width: 1023px)
+      height: 75px
+
+
+  &__telephone
+    padding: 25px 40px
+    border-radius: 20px
+    @extend %font
+    background-color: $yellow
+    color: $pink !important
+    @media screen and (max-width: 1279px)
+      display: none
+
+
+  &__logo
+    width: 228px
+    height: 56px
+    @media screen and (max-width: 767px)
+      width: 130px
+      height: 32px
+
+  &__nav
+    display: flex
+    gap: 20px
+    @media screen and (max-width: 1279px)
+      padding: 30px
+      position: absolute
+      background-color: $white
+      display: none
+      top: 100%
+      width: 100%
+      left: 0
+    @media screen and (min-width: 1280px)
+      display: flex !important
+
+  &__nav-item
+    font-size: 14px
+    @media screen and (max-width: 1919px)
+      display: block
+      margin-bottom: 5px
+    @media screen and (max-width: 1279px)
+      color: $blue !important
+
+
+  &__burger
+
+    flex-direction: column
+    cursor: pointer
+    display: none
+    @media screen and (max-width: 1279px)
+      display: flex
+
+
+    span
+      width: 40px
+      height: 6px
+      background-color: $white
+      margin-bottom: 6px
+      @extend %lc
+      @include r(110px)
+
+
+.header.fixed
+  .header__burger span
+    background-color: $violet

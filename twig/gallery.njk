@@ -1,0 +1,84 @@
+{% set page = { title: 'Галерея', background: 'gallery' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+    <div class="container">
+        <div class="breadcrumbs">
+            {% set  list = [
+                'Wmodels',
+                'Галерея'] %}
+
+            {% for item in list %}
+                <a href="#" class="breadcrumbs__link">
+                    {{ item }}
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 class="h1 color--pink text-center">Галерея</h1>
+    </div>
+
+
+    {% set  _ = 'gallery' %}
+    <div class="{{ _ }} section">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                {% set  list = [
+                    'Новый Год 2023',
+                    'WTF Camp Кипр 2022',
+                    'Корпоратив на Алтае 2022',
+                    'AWSummit Румыния 2021',
+                    'Корпоратив на Алтае 2021',
+                    'Halloween party',
+                    'Новый Год 2021',
+                    'Streamate в гостях у Wmodels',
+                    'Webcam саммит в Сочи',
+                    'Корпоратив на Алтае 2020'] %}
+
+                {% for item in list %}
+                    <a data-fancybox href="#inner-gallery" class="{{ _ }}__item">
+                        <div class="{{ _ }}__img img">
+                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__title">
+                            {{ item }}
+                        </div>
+
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    {% set  _ = 'inner-gallery' %}
+    <div id="inner-gallery" class="{{ _ }}">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                {% for i in range(1, 27) %}
+                    <a href="#image--{{ i }}" data-fancybox="gallery" class="{{ _ }}__item img">
+                        <img src="images/gallery/11.png" alt=""/>
+                    </a>
+
+                    <img id="image--{{ i }}" class="{{ _ }}__img" src="images/gallery/12.png" alt=""/>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+{% endblock content %}

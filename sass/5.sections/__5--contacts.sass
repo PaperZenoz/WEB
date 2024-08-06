@@ -1,0 +1,177 @@
+.contacts
+  @media screen and (max-width: 1279px)
+    padding-bottom: 200px
+
+  &__wrap
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    position: relative
+    @media screen and (max-width: 1279px)
+      flex-direction: column
+    @media screen and (max-width: 767px)
+      gap: 10px
+
+  &__info
+    color: $white
+
+    .btn
+      @media screen and (max-width: 1279px)
+        width: 100%
+        font-size: 24px
+        height: 100px
+        position: absolute
+        bottom: 0
+        margin-bottom: -150px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        height: 50px
+        margin-bottom: -100px
+
+
+  &__general
+    font-size: 30px
+    @media screen and (max-width: 1279px)
+      font-size: 20px
+      margin-top: 100px
+    @media screen and (max-width: 767px)
+      margin-top: 60px
+
+
+    a
+      color: $white
+      @extend %600
+      margin-bottom: 40px
+      display: flex
+      @media screen and (max-width: 1279px)
+        width: 100%
+
+
+    p
+      @media screen and (max-width: 1279px)
+        font-size: 40px
+        text-align: center
+        margin-bottom: 30px
+      @media screen and (max-width: 1023px)
+        font-size: 32px
+      @media screen and (max-width: 767px)
+        font-size: 16px
+        margin-bottom: 20px
+
+  &__title
+    margin-bottom: 60px
+    @media screen and (max-width: 1279px)
+      position: absolute
+      top: 0
+      left: 50%
+      transform: translateX(-50%)
+
+    @media screen and (max-width: 1023px)
+      font-size: 40px
+
+
+
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      margin-bottom: 40px
+
+  &__map
+    @include r(50px)
+    position: relative
+    width: max-content
+    height: max-content
+    @media screen and (max-width: 1279px)
+      width: 100%
+
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      right: 0
+      bottom: 0
+      top: 0
+      background-color: $pink
+      @include r(50px)
+      transform: translate(15px, 15px)
+
+  &__sign
+    @extend %600
+    margin-bottom: 3vw
+    max-width: 400px
+    @media screen and (max-width: 1279px)
+      max-width: 540px
+
+    p
+      @media screen and (max-width: 1279px)
+        font-size: 28px
+      @media screen and (max-width: 767px)
+        font-size: 14px
+
+  &__map-field
+    @include r(50px)
+    overflow: hidden
+    position: relative
+    @media screen and (max-width: 1279px)
+      iframe
+        aspect-ratio: 1 / 1 !important
+        width: 100% !important
+        height: auto !important
+
+  &__telephone
+    font-size: 20px
+    height: 50px
+    line-height: 50px
+    width: 240px
+    @include r(40px)
+    background: linear-gradient(90deg, rgba(139, 92, 246, 1) 0%, rgba(167, 139, 250, 1) 100%)
+
+    justify-content: center
+    color: $yellow !important
+    @extend %transition
+
+    &:hover
+      color: $blue-light !important
+      background: $yellow !important
+    @media screen and (max-width: 1279px)
+      font-size: 40px
+      height: 100px
+      line-height: 100px
+
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      height: 50px
+      line-height: 50px
+
+  &__social
+    display: flex
+    gap: 10px
+    @media screen and (max-width: 1279px)
+      justify-content: space-between
+
+
+    a
+      @extend %fc
+      width: 50px
+      height: 50px
+      background-color: #9061F1
+      @extend %transition
+      @include r(50%)
+      @media screen and (max-width: 1279px)
+        scale: 2
+        margin-top: 30px
+        margin-bottom: 80px
+      @media screen and (max-width: 767px)
+        scale: 1
+        margin-top: 0
+        margin-bottom: 40px
+
+      &:hover
+        background-color: $yellow
+
+        path
+          fill: $blue-light
+
+
+
+

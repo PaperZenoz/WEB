@@ -1,0 +1,25 @@
+.ul
+  margin-bottom: 25px
+
+  li
+    margin-bottom: 20px
+    padding-left: 25px
+    position: relative
+    @extend %lc
+
+    &:before
+      content: ''
+      width: 15px
+      height: 15px
+      border-radius: 50%
+      background: $yellow
+      position: absolute
+      left: 0
+      top: 5px
+
+    @media screen and (max-width: 767px)
+      font-size: 13px
+
+  &--red
+    li:before
+      background: $pink

@@ -1,0 +1,53 @@
+{% set page = { title: 'Ссылки', background: 'pink' } %}
+{% extends "./2.parts/main.njk" %}
+{% block content %}
+
+    <div class="container" style="margin-top: 200px">
+        {% set  list = [{
+            title: 'Политика',
+            subtitle: 'politic'
+
+        },    {
+            title: '404',
+            subtitle: 'not-found'
+        },   {
+            title: 'Контакты',
+            subtitle: 'contacts'
+        },   {
+            title: 'Часто задаваемые вопросы',
+            subtitle: 'questions'
+        },   {
+            title: 'Блог',
+            subtitle: 'blog'
+        },   {
+            title: 'Вакансии',
+            subtitle: 'vacancy'
+        },   {
+            title: 'Галерея',
+            subtitle: 'gallery'
+        },   {
+            title: 'Школа моделей',
+            subtitle: 'school'
+        },   {
+            title: 'Дневник модели',
+            subtitle: 'diary'
+        },   {
+            title: 'Дневник модели (внутренняя)',
+            subtitle: 'diary-inner'
+        },   {
+            title: 'Главная',
+            subtitle: 'general'
+        },   {
+            title: 'Секретный чат',
+            subtitle: 'secret'
+        }] %}
+
+        {% for item in list %}
+            <a href="{{ item.subtitle }}.html" class="btn" style="width: 100%; margin-bottom: 20px">{{ item.title }}</a>
+        {% endfor %}
+
+
+    </div>
+
+
+{% endblock content %}
