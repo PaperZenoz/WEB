@@ -479,15 +479,10 @@
 
 
   &__wrap
-    width: 800px
+    width: 700px
     margin: 0 auto
     @media screen and (max-width: 1279px)
       width: 100%
-
-
-
-
-
 
 
 .general-reviews-slider
@@ -580,10 +575,10 @@
 
 
   .slick-next
-    right: 15px
+    right: -20px
 
   .slick-prev
-    left: 15px
+    left: -20px
 
 
 .general-about
@@ -864,7 +859,9 @@
 
   &__first-title
     .h1
-    position: relative
+      position: relative
+      margin-bottom: 25px
+      font-weight: 800
     @media screen and (max-width: 1023px)
       font-size: 40px
       text-align: left
@@ -872,8 +869,6 @@
       font-size: 20px
       margin-bottom: 10px
 
-
-    margin-bottom: 30px
     @media screen and (max-width: 767px)
       margin-bottom: 10px
 
@@ -896,6 +891,8 @@
       background-image: url("../../images/general-banner-slider/16.jpg")
 
   &__third-slide
+    .h1
+      white-space: nowrap
     background-image: url("../../images/general-banner-slider/bg-2.svg")
     background-size: cover
     @media screen and (max-width: 1919px)
@@ -1028,7 +1025,7 @@
 
 
     .btn
-      margin-top: 30px
+      margin-top: 0px
       @media screen and (max-width: 1279px)
         width: auto
         min-width: auto
@@ -1067,6 +1064,10 @@
 
   &__block
     text-align: center
+    margin-top: 145px
+    @media screen and (max-width: 1919px)
+      margin-top: 0
+
 
     p
       max-width: 510px
@@ -1155,6 +1156,13 @@
     background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='%23A78BFA'/%3E%3C/svg%3E%0A")
     background-size: contain
     background-repeat: no-repeat
+    @extend %transition
+    cursor: pointer
+    background-color: transparent
+
+    &:hover
+      background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='%23FFFF33'/%3E%3C/svg%3E%0A")
+
     @media screen and (max-width: 1279px)
       bottom: 35px
     @media screen and (max-width: 768px)
@@ -1300,3 +1308,7 @@
     transform: rotate(-30deg)
   100%
     transform: rotate(-40deg)
+
+
+.gap
+  margin-bottom: 30px
