@@ -75,11 +75,15 @@
     @extend %lc
     .ol li
       padding-left: 0
+      font-size: clamp(0.875rem, calc(0.8rem + 0.38vw), 1.25rem)
+      font-weight: 500
+      margin-bottom: 1vw
+      @extend %lc
     strong
       font-size: 30px
 
     li:before
-      color: $blue-light
+      color: $blue
 
 
 .diary-inner-recommendation

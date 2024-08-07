@@ -15,6 +15,7 @@
 
   a
     color: $white
+
     &:hover
       color: $blue-light
 
@@ -28,14 +29,26 @@
 
 
   &__telephone
-    padding: 25px 40px
     border-radius: 20px
     @extend %font
     background-color: $yellow
     color: $pink !important
+    @extend %fc
+    width: 231px
+    height: 72px
+    @extend %transition
+
+    &:hover
+      color: $yellow !important
+      background-color: $blue-light
     @media screen and (max-width: 1279px)
       display: none
 
+
+  &__right
+    display: flex
+    gap: 35px
+    align-items: center
 
   &__logo
     width: 228px
@@ -47,6 +60,7 @@
   &__nav
     display: flex
     gap: 20px
+
     @media screen and (max-width: 1279px)
       padding: 30px
       position: absolute
@@ -57,6 +71,7 @@
       left: 0
     @media screen and (min-width: 1280px)
       display: flex !important
+
 
   &__nav-item
     font-size: 14px

@@ -10,39 +10,43 @@
 
 {% set  _ = 'header' %}
 <div class="{{ _ }}">
-    <div class="container container--lg">
+    <div class="container">
         <div class="{{ _ }}__wrap">
             <a href="/" class="{{ _ }}__logo img img--contain">
                 <img src="images/{{ _ }}/logo.png" alt=""/>
             </a>
-            <div class="{{ _ }}__nav">
-                {% set  list = [
-                    'История модели',
-                    'Школа моделей',
-                    'Вакансии',
-                    'Галерея',
-                    'Контакты'] %}
-
-                {% for item in list %}
-                    <a href="#" class="{{ _ }}__nav-item">
-                        {{ item }}
-                    </a>
-                {% endfor %}
 
 
+
+            <div class="{{_}}__right">
+                <div class="{{ _ }}__nav">
+                    {% set  list = [
+                        'История модели',
+                        'Школа моделей',
+                        'Вакансии',
+                        'Галерея',
+                        'Контакты'] %}
+
+                    {% for item in list %}
+                        <a href="#" class="{{ _ }}__nav-item">
+                            {{ item }}
+                        </a>
+                    {% endfor %}
+                </div>
+                <a href="#" class="{{ _ }}__telephone">
+                    +7 913 717 22 92
+                </a>
+
+                <div class="{{_}}__burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </div>
             </div>
 
 
-            <a href="#" class="{{ _ }}__telephone">
-                +7 913 717 22 92
-            </a>
 
-            <div class="{{_}}__burger">
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </div>
         </div>
     </div>
 

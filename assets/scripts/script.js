@@ -48,7 +48,7 @@ $(document).ready(function () {
         })
         $('.general-reviews-slider').slick({
             centerMode: true,
-            slidesToShow: 1.7,
+            slidesToShow: 1,
             responsive: [
                 {
                     breakpoint: 1920,
@@ -65,7 +65,7 @@ $(document).ready(function () {
             var $slider = $('.general-love__list')
 
 
-            if ($(window).width() <= 1024) {
+            if ($(window).width() <= 1280) {
                 $slider.slick()
             } else if ($(window).width() >= 1024 && $slider.hasClass('slick-initialized')) {
                 $slider.slick('unslick')
