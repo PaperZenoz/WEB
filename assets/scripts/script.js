@@ -150,7 +150,7 @@ $(document).ready(function () {
                 var eh = $(this).outerHeight();
                 var dh = $(document).height();
                 if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-                    $(this).find('.vacancy__img').css("transform", "translateX(-50%) scale("+ (1 + $(window).scrollTop() * 0.00002)  +")");
+                    $(this).find('.vacancy__img').css("transform", "translateX(-50%) scale("+ (1 + $(window).scrollTop() * 0.00004)  +")");
                 }
             }) 
         });

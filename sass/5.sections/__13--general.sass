@@ -107,19 +107,21 @@
   top: 50%
   transform: translateY(-50%)
   background-color: $violet
-  padding: 15px
+  padding: 6px
   @include r(57px)
-  scale: 0.54
+  //scale: 0.54
   position: fixed
   z-index: 10000 
 
   a
-    border: 15px solid $pink
+    aspect-ratio: 1
+    width: 49px
     background-color: $pink
-    display: block
-    margin-bottom: 10px
+    flex-shrink: 0
+    margin-bottom: 6px
     @include r(50%)
     line-height: 0
+    @extend %fc
     @extend %lc
 
     &:nth-child(3),
@@ -134,7 +136,7 @@
       &:nth-child(4),
       &:nth-child(5),
       &:nth-child(6)
-        display: block
+        display: flex
 
       &:nth-child(1),
       &:nth-child(2)
@@ -750,7 +752,8 @@
   &__nav
     display: grid
     grid-template-columns: repeat(2, 1fr)
-    grid-gap: 30px
+    grid-gap: 35px 30px
+    height: max-content
     @media screen and (max-width: 1279px)
       display: flex
       gap: 30px
@@ -842,6 +845,7 @@
 
 .general-banner-slider
   &__first-slide
+
     background-image: url("../../images/general-banner-slider/bg.svg")
     background-size: cover
     @media screen and (max-width: 1919px)
@@ -859,8 +863,7 @@
     background-repeat: no-repeat
     position: relative
 
-  &__first-title
-    .h1
+  &__first-title .h1
     position: relative
     margin-bottom: 25px
     font-weight: 800
@@ -1056,6 +1059,7 @@
       margin-bottom: 30px
       font-size: 30px
       @extend %700
+      @extend %font
       @media screen and (max-width: 1279px)
         font-size: 44px
         width: 560px
@@ -1299,6 +1303,10 @@
   pointer-events: none
   overflow: visible !important
   z-index: 1 !important
+
+
+.general-page .parallax-mirror
+  z-index: 2 !important
 
 
 @keyframes label-wiggle

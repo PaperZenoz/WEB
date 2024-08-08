@@ -47,11 +47,24 @@
 
 
   &__img
-    width: 470px
-    height: 470px
+    width: 634px
+    height: 592px
     @include r(40px)
-    box-shadow: 15px 15px 0px -5px rgba($pink, 1)
-
+    margin-top: -100px
+    background-image: url("../../images/school-header/1.png")
+    background-size: contain
+    background-repeat: no-repeat
+    @media screen and (max-width: 1279px)
+      background-image: url("../../images/school-header/2.png")
+      margin-top: 0
+      aspect-ratio: 917 / 792
+      width: 100%
+      height: auto
+      
+    	
+    
+    	
+    
     img
       @include r(40px)
 
