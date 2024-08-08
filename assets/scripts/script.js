@@ -5,8 +5,6 @@ $(window).on("load", function () {
 });
 
 
-
-
 $(document).ready(function () {
     function questions() {
         $('.questions__head').on('click', function () {
@@ -132,13 +130,29 @@ $(document).ready(function () {
 
     }
 
-
     function why_parallax() {
 
 
         $(window).on("scroll", function () {
             $('.general-why__img').css("background-position-y", $(window).scrollTop() * 0.2);
         })
+    }
+
+    function vacancy() {
+        var $item = $('.vacancy__item')
+
+        $(window).scroll(function () {
+            $item.each(function () {
+
+ 
+                if ($(this).offset().top > $(window).scrollTop() + 1000) {
+                    $(this).addClass('active')
+                } else {
+                    $(this).removeClass('active')
+                }
+
+            })
+        });
     }
 
 
@@ -172,5 +186,6 @@ $(document).ready(function () {
     burger()
     school_blur()
     why_parallax()
+    vacancy()
 
 })
