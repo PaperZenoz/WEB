@@ -81,46 +81,6 @@
 
 
   &__contacts
-    display: flex
-    flex-direction: column
-    position: absolute
-    right: 15px
-    top: 50%
-    transform: translateY(-50%)
-    background-color: $violet
-    padding: 15px
-    @include r(50px)
-    scale: 0.8
-
-    a
-      border: 15px solid $pink
-      background-color: $pink
-      display: block
-      margin-bottom: 10px
-      @include r(50%)
-      line-height: 0
-
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5),
-      &:nth-child(6)
-        display: none
-
-    &.open
-      a
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6)
-          display: block
-
-        &:nth-child(1),
-        &:nth-child(2)
-          display: none
-
-    @media screen and (max-width: 1023px)
-      display: none
-
 
   &__subtitle
     font-size: clamp(0.875rem, calc(0.8rem + 0.38vw), 1.25rem)
@@ -138,6 +98,51 @@
     @media screen and (max-width: 767px)
       font-size: 14px
 
+
+
+.float-contacts
+  display: flex
+  flex-direction: column
+  right: 15px
+  top: 50%
+  transform: translateY(-50%)
+  background-color: $violet
+  padding: 15px
+  @include r(57px)
+  scale: 0.8
+  position: fixed
+  z-index: 10000 
+
+  a
+    border: 15px solid $pink
+    background-color: $pink
+    display: block
+    margin-bottom: 10px
+    @include r(50%)
+    line-height: 0
+    @extend %lc 
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6)
+      display: none
+
+  &.open
+    a
+      &:nth-child(3),
+      &:nth-child(4),
+      &:nth-child(5),
+      &:nth-child(6)
+        display: block
+
+      &:nth-child(1),
+      &:nth-child(2)
+        display: none
+
+  @media screen and (max-width: 1023px)
+    display: none
+
 .general-discound
   aspect-ratio: 1920 / 263
   background-image: url("../../images/general-discound/1.jpg")
@@ -153,6 +158,11 @@
 
   &__title
     margin-bottom: 6vw
+
+
+  &__wrap
+    width: 1121px
+    margin: 0 auto
 
   &__item
     @extend %fc
@@ -180,10 +190,10 @@
     opacity: 1
 
   .slick-next
-    right: 20px
+    right: 25px
 
   .slick-prev
-    left: 20px
+    left: 25px
 
 .general-why
   background-image: url("../../images/general-why/bg.svg")
@@ -476,7 +486,7 @@
 
 
   &__wrap
-    width: 800px
+    width: 820px
     margin: 0 auto
     @media screen and (max-width: 1279px)
       width: 100%
@@ -571,10 +581,10 @@
 
 
   .slick-next
-    right: 15px
+    right: 23px
 
   .slick-prev
-    left: 15px
+    left: 23px
 
 .general-about
   background-image: url("../../images/general-about/bg.svg")
@@ -883,7 +893,7 @@
       background-image: url("../../images/general-banner-slider/16.jpg")
 
   &__third-slide
-    .h1 
+    .h1
       white-space: nowrap
     background-image: url("../../images/general-banner-slider/bg-2.svg")
     background-size: cover
@@ -893,6 +903,12 @@
       background-image: url("../../images/general-banner-slider/bg-22.svg")
     @media screen and (max-width: 1279px)
       background-image: url("../../images/general-banner-slider/bg-23.svg")
+
+    .btn
+      margin-top: 80px
+      @media screen and (max-width: 1919px)
+        margin-top: 85px
+
 
   &__main
     display: flex
@@ -1017,7 +1033,7 @@
 
 
     .btn
-      margin-top: 0px
+      //margin-top: 0px 
       @media screen and (max-width: 1279px)
         width: auto
         min-width: auto
@@ -1056,7 +1072,7 @@
 
   &__block
     text-align: center
-    margin-top: 145px
+    margin-top: 155px
     @media screen and (max-width: 1919px)
       margin-top: 0
 
@@ -1282,7 +1298,7 @@
 .parallax-mirror
   pointer-events: none
   overflow: visible !important
-  z-index: 2 !important
+  z-index: 1 !important
 
 
 @keyframes label-wiggle
@@ -1311,11 +1327,13 @@
   background-image: url("../../images/general-vacancy/bg.svg")
   background-size: cover
   display: none
+
   &__head
     display: flex
     flex-wrap: wrap
     gap: 10px 30px
     justify-content: center
+
   &__head-item
     font-size: 32px
     padding: 27px 40px
@@ -1331,8 +1349,10 @@
   background-color: transparent
   filter: brightness(200)
   @extend %transition
+
   &:hover
-      filter: none
+    filter: none
+
   div
     display: none
 
@@ -1340,10 +1360,7 @@
 .fancybox-button.fancybox-button--arrow_right
   right: 300px
   @media screen and (max-width: 1919px)
-  	right: 4vw
-
-
-
+    right: 4vw
 
 
 .fancybox-button.fancybox-button--arrow_left

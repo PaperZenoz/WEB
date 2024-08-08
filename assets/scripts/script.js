@@ -14,8 +14,8 @@ $(document).ready(function () {
         })
     }
 
-    function love_contacts() {
-        var $contacts = $('.general-love__contacts'),
+    function float_contacts() {
+        var $contacts = $('.float-contacts'),
             $open = $contacts.find('.button-open'),
             $close = $contacts.find('.button-close')
 
@@ -181,7 +181,7 @@ $(document).ready(function () {
     sliders()
     header()
     up_btn()
-    love_contacts()
+    float_contacts()
     burger()
     school_blur()
     why_parallax()
