@@ -22,333 +22,335 @@
     <div class="{{ _ }} section section--no-top">
         <div class="container">
             <div class="{{ _ }}__wrap">
-                <div class="{{ _ }}__title h1">
-                    Вебкам модель
-                </div>
-                <div class="{{ _ }}__item">
-                    <div class="{{ _ }}__left">
-                        <div class="{{ _ }}__subtitle h2">
-                            Мы ищем
+                <div class="{{_}}__block">
+                    <div class="{{ _ }}__title h1">
+                        Вебкам модель
+                    </div>
+                    <div class="{{ _ }}__item">
+                        <div class="{{ _ }}__left">
+                            <div class="{{ _ }}__subtitle h2">
+                                Мы ищем
+                            </div>
+
+                            {% set  list = [
+                                'Возраст от 18 до 35 лет',
+                                'Приятная внешность',
+                                'Эмоциональных и открытых',
+                                'Желающих хорошо зарабатывать',
+                                'Смелых и активных'
+
+                            ] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
                         </div>
+                        <div class="{{ _ }}__right">
+                            <div class="{{ _ }}__subtitle h2">
+                                Вы получаете
+                            </div>
 
-                        {% set  list = [
-                            'Возраст от 18 до 35 лет',
-                            'Приятная внешность',
-                            'Эмоциональных и открытых',
-                            'Желающих хорошо зарабатывать',
-                            'Смелых и активных'
 
-                        ] %}
+                            {% set  list = [
+                                'Высокий заработок: от 120 000 ₽',
+                                'Комфортный и красивый офис',
+                                'Комнаты с дизайнерскими интерьерами',
+                                'Работа в активном и целеустремленном коллективе',
+                                'Тренера, способные раскрыть потенциал каждой модели'
+                            ] %}
 
-                        <ul class="ul">
+                            <ul class="ul">
 
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
 
-                        </ul>
+                            </ul>
 
-                    </div>
-                    <div class="{{ _ }}__right">
-                        <div class="{{ _ }}__subtitle h2">
-                            Вы получаете
                         </div>
-
-
-                        {% set  list = [
-                            'Высокий заработок: от 120 000 ₽',
-                            'Комфортный и красивый офис',
-                            'Комнаты с дизайнерскими интерьерами',
-                            'Работа в активном и целеустремленном коллективе',
-                            'Тренера, способные раскрыть потенциал каждой модели'
-                        ] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
-                    </div>
-                    <div class="{{ _ }}__img">
-                        <img src="images/{{ _ }}/1.png" alt=""/>
-                    </div>
-                    <div class="{{ _ }}__img-mobile img">
-                        <img src="images/{{ _ }}/11.png" alt=""/>
-                    </div>
-                </div>
-                <div class="{{ _ }}__button">
-                    <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
-                </div>
-
-
-                <div class="{{ _ }}__title h1">
-                    Администратор
-                </div>
-                <div class="{{ _ }}__item">
-                    <div class="{{ _ }}__left">
-                        <div class="{{ _ }}__subtitle h2">
-                            Мы ищем
+                        <div class="{{ _ }}__img">
+                            <img src="images/{{ _ }}/1.png" alt=""/>
                         </div>
-
-                        {% set  list = [
-                            'Возраст от 25 до 35 лет',
-                            'График работы 5/2. 8-00 - 16-00',
-                            'Готовность и любовь  к ранним подъемам',
-                            'Комфортный график и возможность выбирать  выходные',
-                            'Очень ответвлённую  и осознанную',
-                            'Умеющую располагать к себе  и которая всегда находит выход из любой ситуации'
-
-
-                        ] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
-                    </div>
-                    <div class="{{ _ }}__right">
-                        <div class="{{ _ }}__subtitle h2">
-                            Задачи
+                        <div class="{{ _ }}__img-mobile img">
+                            <img src="images/{{ _ }}/11.png" alt=""/>
                         </div>
-
-
-                        {% set  list = [
-                            'Контроль рабочих процессов',
-                            'Мотивация  и поддержание коллектива',
-                            'Быть легкой в общении',
-                            'Проявлять инициативу в любых делах студии',
-                        ] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
                     </div>
-                    <div class="{{ _ }}__img">
-                        <img src="images/{{ _ }}/2.png" alt=""/>
-                    </div>
-                    <div class="{{ _ }}__img-mobile img">
-                        <img src="images/{{ _ }}/12.png" alt=""/>
+                    <div class="{{ _ }}__button">
+                        <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
                     </div>
                 </div>
-                <div class="{{ _ }}__button">
-                    <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
-                </div>
+                <div class="{{_}}__block">
+                    <div class="{{ _ }}__title h1">
+                        Администратор
+                    </div>
+                    <div class="{{ _ }}__item">
+                        <div class="{{ _ }}__left">
+                            <div class="{{ _ }}__subtitle h2">
+                                Мы ищем
+                            </div>
+
+                            {% set  list = [
+                                'Возраст от 25 до 35 лет',
+                                'График работы 5/2. 8-00 - 16-00',
+                                'Готовность и любовь  к ранним подъемам',
+                                'Комфортный график и возможность выбирать  выходные',
+                                'Очень ответвлённую  и осознанную',
+                                'Умеющую располагать к себе  и которая всегда находит выход из любой ситуации'
 
 
-                <div class="{{ _ }}__title h1">
-                    Тренер
-                </div>
-                <div class="{{ _ }}__item">
-                    <div class="{{ _ }}__left">
-                        <div class="{{ _ }}__subtitle h2">
-                            Мы ищем
+                            ] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
                         </div>
+                        <div class="{{ _ }}__right">
+                            <div class="{{ _ }}__subtitle h2">
+                                Задачи
+                            </div>
 
 
+                            {% set  list = [
+                                'Контроль рабочих процессов',
+                                'Мотивация  и поддержание коллектива',
+                                'Быть легкой в общении',
+                                'Проявлять инициативу в любых делах студии',
+                            ] %}
 
+                            <ul class="ul">
 
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
 
+                            </ul>
 
-
-
-
-
-                        {% set  list = [
-                            'Возраст от 25 до 35 лет',
-                            'Знание английского языка - большое преимущество',
-                            'Обширный опыт работы в вебкам сфере',
-                            'Желание менять жизнь моделей в лучшую сторону',
-                            'Умеющую всеми способами доносить информацию, которая точно будет услышана',
-                        ] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
-                    </div>
-                    <div class="{{ _ }}__right">
-                        <div class="{{ _ }}__subtitle h2">
-                            задачи
                         </div>
-
-
-                        {% set  list = [
-                            'Контроль процессов связанных с работой модели',
-                            'Создание обучающих материалов',
-                            'Обучение моделей работе в индустрии от А до Я',
-                            'Прививать любовь к своей работе',
-                            'Делать работу студии лучше, доход - больше, а работу моделей - продуктивней'
-                        ] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
-                    </div>
-                    <div class="{{ _ }}__img">
-                        <img src="images/{{ _ }}/3.png" alt=""/>
-                    </div>
-                    <div class="{{ _ }}__img-mobile img">
-                        <img src="images/{{ _ }}/13.png" alt=""/>
-                    </div>
-                </div>
-                <div class="{{ _ }}__button">
-                    <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
-                </div>
-
-
-                <div class="{{ _ }}__title h1">
-                    Модельный скаут
-                </div>
-                <div class="{{ _ }}__item">
-                    <div class="{{ _ }}__left">
-                        <div class="{{ _ }}__subtitle h2">
-                            Мы ищем
+                        <div class="{{ _ }}__img">
+                            <img src="images/{{ _ }}/2.png" alt=""/>
                         </div>
-
-                        {% set  list = [
-                            'Человека с опытом в индустрии вебкама, знающего критерии и стандарты индустрии и требования бизнеса.',
-                            'Опытного рекрутера-переговорщика, способного донести преимущества работы в сфере.',
-                            'Человека с обширным кругом контактов, в сфере, которые помогут находить новые таланты.',
-                            'Скаута с аналитическими навыками, который сумеет оценить потенциал модели.'] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
-                    </div>
-                    <div class="{{ _ }}__right">
-                        <div class="{{ _ }}__subtitle h2">
-                            ВЫ ПОЛУЧАЕТЕ
+                        <div class="{{ _ }}__img-mobile img">
+                            <img src="images/{{ _ }}/12.png" alt=""/>
                         </div>
-
-                        {% set  list = [
-                            'Премию от 10 000 р. до 30 000 р., если девушка придет с вашей рекомендации.',
-                            ' Дополнительная премия в размере до 10% от заработка, если привлеченная скаутом модель отработает больше 3 месяца — до 10% от 3х месячного дохода.',
-                            'Если в месяц вы пригласите более 5 моделей, которые отработают у нас больше месяца,  то получаете подарок от студии (наушники, фены, телефоны)'] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
                     </div>
-                    <div class="{{ _ }}__img">
-                        <img src="images/{{ _ }}/4.png" alt=""/>
-                    </div>
-                    <div class="{{ _ }}__img-mobile img">
-                        <img src="images/{{ _ }}/14.png" alt=""/>
+                    <div class="{{ _ }}__button">
+                        <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
                     </div>
                 </div>
-                <div class="{{ _ }}__button">
-                    <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
-                </div>
+                <div class="{{_}}__block">
+                    <div class="{{ _ }}__title h1">
+                        Тренер
+                    </div>
+                    <div class="{{ _ }}__item">
+                        <div class="{{ _ }}__left">
+                            <div class="{{ _ }}__subtitle h2">
+                                Мы ищем
+                            </div>
 
-                <div class="{{ _ }}__title h1">
-                    HR менеджер
-                </div>
-                <div class="{{ _ }}__item">
-                    <div class="{{ _ }}__left">
-                        <div class="{{ _ }}__subtitle h2">
-                            Мы ищем
+
+
+
+
+
+
+
+
+
+                            {% set  list = [
+                                'Возраст от 25 до 35 лет',
+                                'Знание английского языка - большое преимущество',
+                                'Обширный опыт работы в вебкам сфере',
+                                'Желание менять жизнь моделей в лучшую сторону',
+                                'Умеющую всеми способами доносить информацию, которая точно будет услышана',
+                            ] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
                         </div>
+                        <div class="{{ _ }}__right">
+                            <div class="{{ _ }}__subtitle h2">
+                                задачи
+                            </div>
 
 
-                        {% set  list = [
-                            'Девушка от 20 лет',
-                            'Ответственная и коммуникабельная',
-                            'Опыт работы с взаимодействием с людьми ',
-                            'Опыт работы в сфере будет большим преимуществом ',
-                            'Девушка, которая не боится идти первая на контакт и легко знакомится с людьми.'] %}
+                            {% set  list = [
+                                'Контроль процессов связанных с работой модели',
+                                'Создание обучающих материалов',
+                                'Обучение моделей работе в индустрии от А до Я',
+                                'Прививать любовь к своей работе',
+                                'Делать работу студии лучше, доход - больше, а работу моделей - продуктивней'
+                            ] %}
 
-                        <ul class="ul">
+                            <ul class="ul">
 
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
 
-                        </ul>
+                            </ul>
 
-                    </div>
-                    <div class="{{ _ }}__right">
-                        <div class="{{ _ }}__subtitle h2">
-                            ВЫ ПОЛУЧАЕТЕ
                         </div>
-
-
-                        {% set  list = [
-                            'Плавающий график работы: с 11:00-17:00, 5 дней в неделю с возможностью выбирать выходные.',
-                            ' Возможность работать удаленно ',
-                            'Оклад + бонус (10.000-20.000) за приведенную модель!',
-                            'Если в месяц вы пригласите более 5 моделей, которые отработают у нас больше месяца,  то получаете подарок от студии (наушники, фены, телефоны)'] %}
-
-                        <ul class="ul">
-
-                            {% for item in list %}
-                                <li>
-                                    {{ item }}
-                                </li>
-                            {% endfor %}
-
-                        </ul>
-
+                        <div class="{{ _ }}__img">
+                            <img src="images/{{ _ }}/3.png" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__img-mobile img">
+                            <img src="images/{{ _ }}/13.png" alt=""/>
+                        </div>
                     </div>
-                    <div class="{{ _ }}__img">
-                        <img src="images/{{ _ }}/5.png" alt=""/>
-                    </div>
-                    <div class="{{ _ }}__img-mobile img">
-                        <img src="images/{{ _ }}/15.png" alt=""/>
+                    <div class="{{ _ }}__button">
+                        <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
                     </div>
                 </div>
-                <div class="{{ _ }}__button">
-                    <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
-                </div>
+                <div class="{{_}}__block">
+                    <div class="{{ _ }}__title h1">
+                        Модельный скаут
+                    </div>
+                    <div class="{{ _ }}__item">
+                        <div class="{{ _ }}__left">
+                            <div class="{{ _ }}__subtitle h2">
+                                Мы ищем
+                            </div>
 
+                            {% set  list = [
+                                'Человека с опытом в индустрии вебкама, знающего критерии и стандарты индустрии и требования бизнеса.',
+                                'Опытного рекрутера-переговорщика, способного донести преимущества работы в сфере.',
+                                'Человека с обширным кругом контактов, в сфере, которые помогут находить новые таланты.',
+                                'Скаута с аналитическими навыками, который сумеет оценить потенциал модели.'] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
+                        </div>
+                        <div class="{{ _ }}__right">
+                            <div class="{{ _ }}__subtitle h2">
+                                ВЫ ПОЛУЧАЕТЕ
+                            </div>
+
+                            {% set  list = [
+                                'Премию от 10 000 р. до 30 000 р., если девушка придет с вашей рекомендации.',
+                                ' Дополнительная премия в размере до 10% от заработка, если привлеченная скаутом модель отработает больше 3 месяца — до 10% от 3х месячного дохода.',
+                                'Если в месяц вы пригласите более 5 моделей, которые отработают у нас больше месяца,  то получаете подарок от студии (наушники, фены, телефоны)'] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
+                        </div>
+                        <div class="{{ _ }}__img">
+                            <img src="images/{{ _ }}/4.png" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__img-mobile img">
+                            <img src="images/{{ _ }}/14.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="{{ _ }}__button">
+                        <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
+                    </div>
+                </div>
+                <div class="{{_}}__block">
+                    <div class="{{ _ }}__title h1">
+                        HR менеджер
+                    </div>
+                    <div class="{{ _ }}__item">
+                        <div class="{{ _ }}__left">
+                            <div class="{{ _ }}__subtitle h2">
+                                Мы ищем
+                            </div>
+
+
+                            {% set  list = [
+                                'Девушка от 20 лет',
+                                'Ответственная и коммуникабельная',
+                                'Опыт работы с взаимодействием с людьми ',
+                                'Опыт работы в сфере будет большим преимуществом ',
+                                'Девушка, которая не боится идти первая на контакт и легко знакомится с людьми.'] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
+                        </div>
+                        <div class="{{ _ }}__right">
+                            <div class="{{ _ }}__subtitle h2">
+                                ВЫ ПОЛУЧАЕТЕ
+                            </div>
+
+
+                            {% set  list = [
+                                'Плавающий график работы: с 11:00-17:00, 5 дней в неделю с возможностью выбирать выходные.',
+                                ' Возможность работать удаленно ',
+                                'Оклад + бонус (10.000-20.000) за приведенную модель!',
+                                'Если в месяц вы пригласите более 5 моделей, которые отработают у нас больше месяца,  то получаете подарок от студии (наушники, фены, телефоны)'] %}
+
+                            <ul class="ul">
+
+                                {% for item in list %}
+                                    <li>
+                                        {{ item }}
+                                    </li>
+                                {% endfor %}
+
+                            </ul>
+
+                        </div>
+                        <div class="{{ _ }}__img">
+                            <img src="images/{{ _ }}/5.png" alt=""/>
+                        </div>
+                        <div class="{{ _ }}__img-mobile img">
+                            <img src="images/{{ _ }}/15.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="{{ _ }}__button">
+                        <a data-fancybox href="#vacancy-popup" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

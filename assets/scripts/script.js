@@ -144,30 +144,29 @@ $(document).ready(function () {
         $(window).scroll(function () {
             $item.each(function () {
 
- 
-                if ($(this).offset().top > $(window).scrollTop() + 1000) {
-                    $(this).addClass('active')
-                } else {
-                    $(this).removeClass('active')
+                var wt = $(window).scrollTop();
+                var wh = $(window).height();
+                var et = $(this).offset().top;
+                var eh = $(this).outerHeight();
+                var dh = $(document).height();
+                if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
+                    $(this).find('.vacancy__img').css("transform", "translateX(-50%) scale("+ (1 + $(window).scrollTop() * 0.00002)  +")");
                 }
-
-            })
+            }) 
         });
     }
 
 
-    $('.politic').parallax({imageSrc: 'images/politic/bg.svg', speed: 1.5});
-    // $('.diary-inner').parallax({imageSrc: 'images/diary-inner/bg.svg', speed: 1.5});
-    $('.diary').parallax({imageSrc: 'images/diary/bg.svg', speed: 1.5});
-    $('.school').parallax({imageSrc: 'images/school/bg.svg', speed: 1.5});
-    // $('.vacancy').parallax({imageSrc: 'images/vacancy/bg.svg', speed: 1.5});
-    // $('.general-love').parallax({imageSrc: 'images/general-love/bg.svg', speed: 1.5, zIndex: 100 });
-    // $('.general-why').parallax({imageSrc: 'images/general-why/bg.svg', speed: 1.5, zIndex: 100 });
-    // $('.general-diary').parallax({imageSrc: 'images/general-diary/bg.svg', speed: 1.5, zIndex: 100 });
-    // $('.general-about').parallax({imageSrc: 'images/general-about/bg.svg', speed: 1.5, zIndex: 100 });
-
-
-    // $('.general-why__img').parallax({imageSrc: 'images/general-why/1.svg', speed: 1.5});
+    $('.politic').parallax({imageSrc: 'images/politic/bg-parallax.svg', speed: 1.5});
+    $('.diary').parallax({imageSrc: 'images/diary/bg-parallax.svg', speed: 1.5});
+    $('.school').parallax({imageSrc: 'images/school/bg-parallax.svg', speed: 1.5});
+    $('.general-love').parallax({imageSrc: 'images/general-love/bg-parallax.svg', speed: 1.5});
+    $('.diary-inner').parallax({imageSrc: 'images/diary-inner/bg-parallax.svg', speed: 1.5});
+    $('.contacts').parallax({imageSrc: 'images/contacts/bg-parallax.svg', speed: 1.5});
+    $('.blog').parallax({imageSrc: 'images/blog/bg-parallax.svg', speed: 1.5});
+    $('.vacancy').parallax({imageSrc: 'images/vacancy/bg-parallax.svg', speed: 1.5});
+    $('.gallery').parallax({imageSrc: 'images/gallery/bg-parallax.svg', speed: 1.5});
+    $('.general-about').parallax({imageSrc: 'images/general-about/bg-parallax.svg', speed: 1.5});
 
 
     function school_blur() {

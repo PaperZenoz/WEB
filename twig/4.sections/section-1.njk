@@ -1,0 +1,21 @@
+{% set  _ = 'general-vacancy' %}
+<div class="{{ _ }} section">
+    <div class="container">
+        <div class="{{ _ }}__wrap">
+            <div class="{{ _ }}__head">
+                {% set  list = [
+                    'Вебкам модель',
+                    'Администратор',
+                    'Тренер',
+                    'Модельный скаут',
+                    'HR Менеджер'] %}
+
+                {% for item in list %}
+                    <a href="#" class="{{ _ }}__head-item">
+                        {{ item }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

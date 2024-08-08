@@ -1,4 +1,5 @@
 .contacts
+  margin-bottom: 13vw
   @media screen and (max-width: 1279px)
     padding-bottom: 200px
 
@@ -59,7 +60,7 @@
         margin-bottom: 20px
 
   &__title
-    margin-bottom: 60px
+    margin-bottom: 40px
     @media screen and (max-width: 1279px)
       position: absolute
       top: 0
@@ -80,24 +81,13 @@
     position: relative
     width: max-content
     height: max-content
+    box-shadow: 15px 15px 0px -5px rgba($pink, 1)
     @media screen and (max-width: 1279px)
       width: 100%
 
-
-    &:before
-      content: ''
-      position: absolute
-      left: 0
-      right: 0
-      bottom: 0
-      top: 0
-      background-color: $pink
-      @include r(50px)
-      transform: translate(15px, 15px)
-
   &__sign
     @extend %600
-    margin-bottom: 3vw
+    margin-bottom: 2vw
     max-width: 400px
     @media screen and (max-width: 1279px)
       max-width: 540px
