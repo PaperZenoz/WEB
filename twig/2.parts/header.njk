@@ -6,7 +6,7 @@
     <title>{{ page.title }}</title>
     {% include "./head.njk" %}
 </head>
-<body>
+<body {% if page.general == true %} class="general-page"   {% endif %}>
 
 {% set  _ = 'header' %}
 <div class="{{ _ }}">
