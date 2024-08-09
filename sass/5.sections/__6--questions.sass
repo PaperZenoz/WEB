@@ -74,21 +74,17 @@
     color: $blue
 
     &:before
-      content: '+'
+      content: ''
       font-size: 40px
-      width: 50px
-      height: 50px
+      width: 72px
+      height: 72px
       position: absolute
       @include r(50%)
-      color: $white
-      background-color: $pink
       right: 0
       top: 20px
-      //@extend %fc
-      text-align: center
-      line-height: 1
-      @extend %transition
-      box-sizing: border-box
+      //@extend %transition 
+      background-image: url("data:image/svg+xml,%3Csvg width='71' height='72' viewBox='0 0 71 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35.3553' cy='36' r='25' transform='rotate(-45 35.3553 36)' fill='%23F472B6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.7705 34.041C26.6885 34.041 25.8115 34.9181 25.8115 36C25.8115 37.0819 26.6885 37.959 27.7705 37.959L33.6476 37.959L33.6476 43.8361C33.6476 44.9181 34.5247 45.7951 35.6066 45.7951C36.6885 45.7951 37.5656 44.9181 37.5656 43.8361L37.5656 37.959H43.4427C44.5247 37.959 45.4017 37.0819 45.4017 36C45.4017 34.9181 44.5247 34.041 43.4427 34.041H37.5656V28.1639C37.5656 27.0819 36.6885 26.2049 35.6066 26.2049C34.5247 26.2049 33.6476 27.0819 33.6476 28.1639L33.6476 34.041L27.7705 34.041Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
+      background-size: contain
       @media screen and (max-width: 1023px)
         width: 36px
         height: 36px
@@ -98,10 +94,10 @@
 
     &.open
       &:before
-        transform: rotate(-45deg)
-        background-color: $blue-light
-        color: $yellow
-
+        background-image: url("data:image/svg+xml,%3Csvg width='51' height='50' viewBox='0 0 51 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25.3555' cy='25' r='25' transform='rotate(-90 25.3555 25)' fill='%239061F1'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M18.607 28.9781C17.8419 29.7432 17.8419 30.9836 18.607 31.7486C19.372 32.5137 20.6124 32.5136 21.3775 31.7486L25.5333 27.5928L29.689 31.7486C30.4541 32.5136 31.6945 32.5136 32.4595 31.7486C33.2246 30.9835 33.2246 29.7431 32.4595 28.9781L28.3038 24.8223L32.4594 20.6667C33.2245 19.9016 33.2245 18.6612 32.4594 17.8962C31.6944 17.1311 30.454 17.1311 29.6889 17.8962L25.5333 22.0518L21.3776 17.8961C20.6125 17.1311 19.3721 17.1311 18.6071 17.8961C17.8421 18.6612 17.8421 19.9016 18.6071 20.6666L22.7628 24.8223L18.607 28.9781Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
+        background-size: 50px 50px
+        background-position: center
+        background-repeat: no-repeat
     @media screen and (max-width: 1023px)
       font-size: 20px
 
