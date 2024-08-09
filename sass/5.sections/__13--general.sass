@@ -2,6 +2,7 @@
   background-image: url("../../images/general-love/bg.svg")
   background-size: cover
   position: relative
+  overflow: hidden
 
 
   &__title
@@ -165,6 +166,11 @@
   &__wrap
     width: 1121px
     margin: 0 auto
+    @media screen and (max-width: 1279px)
+    	width: 100% 
+
+
+
 
   &__item
     @extend %fc
@@ -1307,6 +1313,13 @@
 
 .general-page .parallax-mirror
   z-index: 2 !important
+  @media screen and (max-width: 1919px)
+    z-index: 1 !important
+
+
+
+
+
 
 
 @keyframes label-wiggle
