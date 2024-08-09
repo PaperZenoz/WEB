@@ -72,6 +72,11 @@
     position: relative
     cursor: pointer
     color: $blue
+    @media screen and (max-width: 1023px)
+      font-size: 16px
+
+
+
 
     &:before
       content: ''
@@ -82,15 +87,12 @@
       @include r(50%)
       right: 0
       top: 20px
-      //@extend %transition 
+      //@extend %transition
       background-image: url("data:image/svg+xml,%3Csvg width='71' height='72' viewBox='0 0 71 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='35.3553' cy='36' r='25' transform='rotate(-45 35.3553 36)' fill='%23F472B6'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M27.7705 34.041C26.6885 34.041 25.8115 34.9181 25.8115 36C25.8115 37.0819 26.6885 37.959 27.7705 37.959L33.6476 37.959L33.6476 43.8361C33.6476 44.9181 34.5247 45.7951 35.6066 45.7951C36.6885 45.7951 37.5656 44.9181 37.5656 43.8361L37.5656 37.959H43.4427C44.5247 37.959 45.4017 37.0819 45.4017 36C45.4017 34.9181 44.5247 34.041 43.4427 34.041H37.5656V28.1639C37.5656 27.0819 36.6885 26.2049 35.6066 26.2049C34.5247 26.2049 33.6476 27.0819 33.6476 28.1639L33.6476 34.041L27.7705 34.041Z' fill='%23FDE68A'/%3E%3C/svg%3E%0A")
       background-size: contain
       @media screen and (max-width: 1023px)
-        width: 36px
-        height: 36px
-        font-size: 30px
-        padding-bottom: 8px
-
+        width: 50px
+        height: 50px
 
     &.open
       &:before
@@ -98,9 +100,8 @@
         background-size: 50px 50px
         background-position: center
         background-repeat: no-repeat
-    @media screen and (max-width: 1023px)
-      font-size: 20px
-
+        @media screen and (max-width: 1023px)
+          background-size: 36px 36px
 
   &__body
     padding-bottom: 30px
