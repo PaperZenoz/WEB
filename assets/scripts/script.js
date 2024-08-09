@@ -44,17 +44,30 @@ $(document).ready(function () {
     function sliders() {
         $('.general-diary-slider').slick()
         $('.general-interior__slider').slick({
-            centerMode: true
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        centerMode: false,
+                        slidesToShow: 1,
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
         })
         $('.general-reviews-slider').slick({
             centerMode: true,
             slidesToShow: 1,
             responsive: [
                 {
-                    breakpoint: 1920,
+                    breakpoint: 1280,
                     settings: {
                         centerMode: false,
-                        slidesToShow: 1
+                        slidesToShow: 1,
+                        arrows: false,
+                        dots: true
                     }
                 }
             ]

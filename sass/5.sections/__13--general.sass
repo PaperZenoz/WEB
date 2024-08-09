@@ -4,7 +4,6 @@
   position: relative
   overflow: hidden
 
-
   &__title
     margin-bottom: 100px
     @media screen and (max-width: 1439px)
@@ -21,7 +20,6 @@
       font-size: 20px
       margin-bottom: 30px
 
-
   &__list
     display: grid
     grid-template-columns: repeat(4, 1fr)
@@ -33,7 +31,7 @@
       width: 620px
       margin: 0 auto
     @media screen and (max-width: 767px)
-      width: 335px
+      width: 227px
 
 
     .slick-next
@@ -42,17 +40,20 @@
     .slick-prev
       left: -60px
 
-
   &__img
     aspect-ratio: 227 / 492
     margin-bottom: 2vw
     @extend %transition
     box-shadow: 0px 0px 0px -5px rgba($pink, 1)
     border-radius: 35px
+    @media screen and (max-width: 1023px)
+    	margin-bottom: 20px
+    
+    	
+    
 
     &:hover
       box-shadow: 15px 15px 0px -5px rgba($pink, 1)
-
 
   &__item
     @include r(30px)
@@ -80,7 +81,6 @@
       @media screen and (max-width: 767px)
         font-size: 12px
 
-
   &__contacts
 
   &__subtitle
@@ -100,7 +100,6 @@
       font-size: 14px
 
 
-
 .float-contacts
   display: flex
   flex-direction: column
@@ -112,7 +111,7 @@
   @include r(57px)
   //scale: 0.54
   position: fixed
-  z-index: 10000 
+  z-index: 10000
 
   a
     aspect-ratio: 1
@@ -161,15 +160,20 @@
 
   &__title
     margin-bottom: 6vw
+    
+  &__slider
+    @media screen and (max-width: 1023px)
+    	padding-bottom: 45px
+    
+    	
+    
 
 
   &__wrap
     width: 1121px
     margin: 0 auto
     @media screen and (max-width: 1279px)
-    	width: 100%
-
-
+      width: 100%
 
 
   &__item
@@ -207,6 +211,12 @@
   background-image: url("../../images/general-why/bg.svg")
   background-size: cover
   position: relative
+  @media screen and (max-width: 1023px)
+    background-image: url("../../images/general-why/bg-2.svg")
+
+
+
+
 
   &__img
     width: 280px
@@ -422,7 +432,8 @@
   @include r(50px)
   box-shadow: 15px 15px 0px -5px rgba($yellow, 1)
   @media screen and (max-width: 1279px)
-    box-shadow: 15px 15px 0px -5px rgba($violet, 1)
+    @include r(25px)
+    box-shadow: 10px 10px 0px -5px rgba($violet, 1)
 
 
   &:after
@@ -466,13 +477,18 @@
 
     img
       @include r(50px)
+      @media screen and (max-width: 1279px)
+      	@include r(25px)
+      
+      	
+      
 
   .slick-next
     right: -75px
     @media screen and (max-width: 1023px)
       right: 25px
     @media screen and (max-width: 767px)
-      right: -25px
+      right: -50px
 
 
   .slick-prev
@@ -480,7 +496,7 @@
     @media screen and (max-width: 1023px)
       left: 25px
     @media screen and (max-width: 767px)
-      left: -25px
+      left: -50px
 
 .general-reviews
   background-color: #F086A9
@@ -500,6 +516,11 @@
       width: 100%
 
 .general-reviews-slider
+  @media screen and (max-width: 1023px)
+  	padding-bottom: 45px
+  
+  	
+  
   &__item
     width: 560px
     min-height: 480px
@@ -511,6 +532,7 @@
     justify-content: center
     margin: 0 auto
     @media screen and (max-width: 1279px)
+      @include r(25px)
       width: 800px
       min-height: 1070px
 
@@ -608,6 +630,12 @@
   &__wrap
     @media screen and (max-width: 1279px)
       margin-top: 200px
+    @media screen and (max-width: 767px)
+      margin-top: 60px
+
+
+
+
 
   &__content
     display: grid
@@ -721,6 +749,7 @@
     @media screen and (max-width: 767px)
       h2
         font-size: 20px
+        top: -150px
 
     p
       @media screen and (max-width: 1279px)
@@ -903,7 +932,7 @@
 
   &__third-slide
     .h1
-      white-space: nowrap
+    white-space: nowrap
     background-image: url("../../images/general-banner-slider/bg-2.svg")
     background-size: cover
     @media screen and (max-width: 1919px)
@@ -1266,6 +1295,9 @@
   overflow: hidden
   height: 68px
   background: linear-gradient(90deg, rgba(240, 134, 169, 1) 0%, rgba(167, 139, 250, 1) 100%)
+  @media screen and (max-width: 1023px)
+    height: auto
+
 
   p
     text-align: center
@@ -1273,9 +1305,14 @@
     text-transform: uppercase
     padding-top: 20px
     animation: text 10s infinite linear
-    //padding-left: 100%
     white-space: nowrap
+    margin-bottom: 0
     @extend %font
+    @media screen and (max-width: 1023px)
+      font-size: 14px
+      padding-top: 15px
+      padding-bottom: 15px
+
 
 
   span
@@ -1315,11 +1352,6 @@
   z-index: 2 !important
   @media screen and (max-width: 1919px)
     z-index: 1 !important
-
-
-
-
-
 
 
 @keyframes label-wiggle

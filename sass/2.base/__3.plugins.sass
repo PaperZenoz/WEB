@@ -47,7 +47,13 @@
     gap: 31px
     bottom: 100px
     @media screen and (max-width: 1023px)
+    	gap: 27px
+    
+    	
+    
+    @media screen and (max-width: 1023px)
       bottom: 30px
+      gap: 10px
     @media screen and (max-width: 767px)
       bottom: 10px
 
@@ -66,6 +72,11 @@
       @include r(50%)
       border: none
       background-color: $violet
+      flex-shrink: 0
+      padding: 0
+      @media screen and (max-width: 1023px)
+        width: 10px
+        height: 10px
 
     .slick-active button
       background-color: $yellow
