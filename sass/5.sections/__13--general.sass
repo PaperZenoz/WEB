@@ -37,9 +37,13 @@
 
     .slick-next
       right: -60px
+      @media screen and (max-width: 767px)
+        top: 250px
 
     .slick-prev
       left: -60px
+      @media screen and (max-width: 767px)
+        top: 250px
 
   &__img
     aspect-ratio: 227 / 492
@@ -109,13 +113,14 @@
   background-color: $violet
   padding: 6px
   @include r(57px)
-  //scale: 0.54
   position: fixed
   z-index: 10000
+  align-items: center
 
   a
     aspect-ratio: 1
     width: 49px
+    height: 49px
     background-color: $pink
     flex-shrink: 0
     margin-bottom: 6px
@@ -142,8 +147,75 @@
       &:nth-child(2)
         display: none
 
-  @media screen and (max-width: 1023px)
+  @media screen and (max-width: 1279px)
     display: none
+
+
+.float-contacts-mobile
+  background-color: $violet
+  padding: 43px 0px
+  justify-content: space-between
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 1
+  display: none
+  transform: translateY(100%)
+  @extend %transition
+  @media screen and (max-width: 1279px)
+    display: flex
+  @media screen and (max-width: 1023px)
+    padding: 16px 0
+
+
+  a
+    width: 100%
+    @extend %fc
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      width: 3px
+      height: 100%
+      right: 0
+      background-color: rgba($white, 0.25)
+
+    &:last-child:before
+      display: none
+
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5)
+      display: none
+
+
+  svg
+    width: 132px
+    height: auto
+    @media screen and (max-width: 1023px)
+      width: 49px
+
+
+.float-contacts-mobile.open
+  a
+    &:before
+      display: none
+
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5)
+      display: flex
+
+  .button-open
+    order: -1
+
+
+
+.float-contacts-mobile.fixed
+  transform: translateY(0)
 
 .general-discound
   aspect-ratio: 1920 / 263
@@ -194,15 +266,17 @@
 
   .slick-slide
     opacity: 0.5
- 
+
   .slick-current
     opacity: 1
 
   .slick-next
     right: 25px
 
+
   .slick-prev
     left: 25px
+
 
 .general-why
   background-image: url("../../images/general-why/bg.svg")
@@ -428,7 +502,7 @@
   position: relative
   @include r(50px)
   box-shadow: 15px 15px 0px -5px rgba($yellow, 1)
-  @media screen and (max-width: 1279px)
+  @media screen and (max-width: 767px)
     @include r(25px)
     box-shadow: 10px 10px 0px -5px rgba($violet, 1)
 
@@ -474,7 +548,7 @@
 
     img
       @include r(50px)
-      @media screen and (max-width: 1279px)
+      @media screen and (max-width: 767px)
         @include r(25px)
 
 
@@ -510,6 +584,11 @@
     @media screen and (max-width: 1279px)
       width: 100%
 
+
+    @media screen and (max-width: 767px)
+      width: 320px
+
+
 .general-reviews-slider
   @media screen and (max-width: 1023px)
     padding-bottom: 45px
@@ -536,9 +615,9 @@
       min-height: 800px
       padding: 30px
     @media screen and (max-width: 767px)
-      width: 100%
+      width: 295px
       min-height: 400px
-      padding: 30px 35px
+      padding: 30px 20px
 
   &__user
     display: flex
@@ -593,8 +672,6 @@
 
   .slick-list
     overflow: visible
-    @media screen and (max-width: 1023px)
-      overflow: hidden
 
 
   .slick-arrow
@@ -829,7 +906,7 @@
       align-items: center
       padding: 15px 30px
       @include r(110px)
-      background-color: $blue-light
+      background: linear-gradient(90deg, #8B5CF6 0%, #A78BFA 100%)
     @media screen and (max-width: 767px)
       padding: 18px 30px
       top: 60px
@@ -850,6 +927,9 @@
     gap: 10px
     margin-bottom: 2vw
     justify-content: center
+    @media screen and (max-width: 767px)
+      justify-content: space-between
+
 
     a
       @extend %fc

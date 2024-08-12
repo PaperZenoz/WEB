@@ -30,6 +30,32 @@ $(document).ready(function () {
         })
     }
 
+    function float_contacts_mobile() {
+        var $contacts = $('.float-contacts-mobile'),
+            $open = $contacts.find('.button-open'),
+            $close = $contacts.find('.button-close')
+
+        $open.on('click', function (e) {
+            e.preventDefault()
+            $contacts.addClass('open')
+        })
+
+        $close.on('click', function (e) {
+            e.preventDefault()
+            $contacts.removeClass('open')
+        })
+
+
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $contacts.addClass('fixed')
+            } else {
+                $contacts.removeClass('fixed')
+            }
+        });
+    }
+
     function header() {
         var $header = $('.header')
         $(window).scroll(function () {
@@ -195,6 +221,7 @@ $(document).ready(function () {
     header()
     up_btn()
     float_contacts()
+    float_contacts_mobile()
     burger()
     school_blur()
     why_parallax()
