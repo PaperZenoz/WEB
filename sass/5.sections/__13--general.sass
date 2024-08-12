@@ -316,7 +316,7 @@
 
 
     img
-      //@include r(50px) 
+      //@include r(50px)
       height: 250px
       @media screen and (max-width: 767px)
         height: 150px
@@ -1801,9 +1801,17 @@
 
 
 .general-corporate
+  display: none
   text-align: center
   background-image: url("../../images/general-corporate/bg.svg")
   background-size: cover
+  @media screen and (max-width: 1279px)
+    display: block
+
+
+
+
+
   @media screen and (max-width: 767px)
     background-image: url("../../images/general-corporate/bg-2.svg")
 
