@@ -6,6 +6,12 @@
     padding-left: 25px
     position: relative
     @extend %lc
+    @media screen and (max-width: 767px)
+    	padding-left: 18px
+    	
+    
+    	
+    
 
     &:before
       content: ''
@@ -16,6 +22,9 @@
       position: absolute
       left: 0
       top: 5px
+      @media screen and (max-width: 767px)
+        width: 8px
+        height: 8px
 
     @media screen and (max-width: 767px)
       font-size: 13px

@@ -918,7 +918,7 @@
 
   &__third-slide
     .h1
-      white-space: nowrap
+    white-space: nowrap
     background-image: url("../../images/general-banner-slider/bg-2.svg")
     background-size: cover
     @media screen and (max-width: 1919px)
@@ -1369,10 +1369,6 @@
     display: block
 
 
-
-
-
-
   &__head
     display: flex
     flex-wrap: wrap
@@ -1380,6 +1376,14 @@
     justify-content: center
     max-width: 700px
     margin: 0 auto 80px
+    @media screen and (max-width: 1023px)
+      gap: 10px 20px
+      max-width: 525px
+      margin: 0 auto 60px
+    @media screen and (max-width: 767px)
+      gap: 10px
+      margin: 0 auto 30px
+
 
   &__head-item
     background-color: #F086A9
@@ -1389,20 +1393,44 @@
     height: 78px
     padding: 0 40px
     font-size: 32px
+    @media screen and (max-width: 1023px)
+      height: 58px
+      @include r(1474px)
+      padding: 0 30px
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+      padding: 0 15px
+      height: 28px
+      @include r(720px)
 
 
   &__title
     text-align: center
+    margin-bottom: 220px
+    @media screen and (max-width: 1023px)
+      font-size: 40px
+      margin-bottom: 160px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      margin-bottom: 80px
 
 
   &__item .btn
     width: 100%
     font-size: 33px
     line-height: 1
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      font-size: 12px
 
 
   &__block
     margin-bottom: 54px
+    position: relative
+    @media screen and (max-width: 767px)
+      margin-bottom: 20px 
 
 
   &__block-title
@@ -1410,27 +1438,99 @@
     color: $yellow
     @extend %up
     margin-bottom: 54px
+    @media screen and (max-width: 1023px)
+      font-size: 28px
+      margin-bottom: 49px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      margin-bottom: 20px 
+    	
+    
+    	
+    
 
 
   &__search
     padding: 80px 55px
     background-color: $violet
     @include r(68px 68px 0 0)
+    @media screen and (max-width: 1023px)
+      @include r(51px 51px 0 0)
+      padding: 61px 41px
+    @media screen and (max-width: 767px)
+      @include r(25px 25px 0 0)
+      padding: 30px 20px
+    	
+    
+    	
+    
+
 
   &__reseption
     padding: 80px 55px
     background-color: $pink
     @include r(0 0 68px 68px)
+    @media screen and (max-width: 1023px)
+      @include r(0 0 51px 51px)
+      padding: 61px 41px
+    @media screen and (max-width: 767px)
+      @include r(0 0 25px 25px)
+      padding: 30px 20px
+
+
+
+
+
 
 
   &__list
     color: $white
     font-size: 32px
     margin-bottom: 0
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+
+
+
+
+
+
     li
       padding-left: 40px
+      @media screen and (max-width: 767px)
+      	padding-left: 18px
+      	
+      
+      	
+      
+
       &:before
         top: 13px
+        @media screen and (max-width: 767px)
+          top: 5px
+        	
+        
+        	
+        
+
+
+  &__photo
+    aspect-ratio: 1 / 1
+    width: 245px
+    position: absolute
+    top: 0
+    left: 50%
+    transform: translate(-50%, -65%)
+    @media screen and (max-width: 1023px)
+      width: 185px
+    @media screen and (max-width: 767px)
+    	width: 90px
+    	
+    
+    	
+    
 
 
 .fancybox-navigation .fancybox-button
