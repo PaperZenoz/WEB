@@ -16,36 +16,35 @@
                     </a>
                 {% endfor %}
             </div>
-            <div class="{{_}}__body">
-                <div class="{{_}}__item">
+            <div class="{{ _ }}__body">
+                <div class="{{ _ }}__item">
                     <h2 class="{{ _ }}__title h1 color--pink">
                         Вебкам модель
                     </h2>
-                    <div class="{{_}}__block">
-                        <div class="{{_}}__search">
-                            <div class="{{_}}__block-title">
+                    <div class="{{ _ }}__block">
+                        <div class="{{ _ }}__search">
+                            <div class="{{ _ }}__block-title">
                                 Мы ищем
                             </div>
-                            
-                            
+
+
                             {% set  list = [
                                 'Возраст от 18 до 35 лет',
                                 'Приятная внешность',
                                 'Эмоциональных и открытых',
                                 'Желающих хорошо зарабатывать',
-                                'Смелых и активных']
-                            %}
-                                
+                                'Смелых и активных'] %}
 
-                            <ul class="{{_}}__list ul">
+
+                            <ul class="{{ _ }}__list ul">
                                 {% for item in list %}
                                     <li>{{ item }}</li>
                                 {% endfor %}
                             </ul>
-                        
+
                         </div>
-                        <div class="{{_}}__reseption">
-                            <div class="{{_}}__block-title">
+                        <div class="{{ _ }}__reseption">
+                            <div class="{{ _ }}__block-title">
                                 ВЫ ПОЛУЧАЕТЕ
                             </div>
 
@@ -55,18 +54,17 @@
                                 'Комфортный и красивый офис',
                                 'Комнаты с дизайнерскими  интерьерами',
                                 'Работа в активном и целеустремленном коллективе',
-                                'Тренера, способные раскрыть  потенциал каждой модели']
-                            %}
+                                'Тренера, способные раскрыть  потенциал каждой модели'] %}
 
 
-                            <ul class="{{_}}__list ul">
+                            <ul class="{{ _ }}__list ul">
                                 {% for item in list %}
                                     <li>{{ item }}</li>
                                 {% endfor %}
                             </ul>
 
                         </div>
-                        <div class="{{_}}__photo img">
+                        <div class="{{ _ }}__photo img">
                             <img src="images/{{ _ }}/1.png" alt=""/>
                         </div>
                     </div>
@@ -74,6 +72,35 @@
                 </div>
 
             </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% set  _ = 'general-school' %}
+<div class="{{ _ }} section">
+    <div class="container">
+        <div class="{{ _ }}__wrap">
+            <div class="{{ _ }}__img img">
+                <img src="images/{{ _ }}/1.png" alt=""/>
+            </div>
+            <h2 class="{{_}}__title h1 color--yellow">
+                Школа моделей
+            </h2>
+            <div class="{{_}}__text">
+                <p>Даем хороший заработок уже на старте. <br> Мы разработали программу для моделей без опыта, с гарантией
+                    заработка от 60 000 рублей в первый месяц.  </p>
+
+
+                <p>Программа обучения рассчитана на 3 месяца и включает в себя работу с коучем, стилистом и мастера
+                    ораторского искусства.  </p>
+
+                <p>По итогам обучения вы гарантированно будете зарабатывать от 120 000 рублей в месяц в нашей студии. А
+                    самые талантливые получат бонус!</p>
+            </div>
+
+            <a href="#" class="btn btn--yellow btn--shadow">Узнать больше</a>
 
         </div>
     </div>
