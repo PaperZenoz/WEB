@@ -216,7 +216,6 @@
     order: -1
 
 
-
 .float-contacts-mobile.fixed
   transform: translateY(0)
 
@@ -317,7 +316,7 @@
 
 
     img
-      @include r(50px)
+      //@include r(50px) 
       height: 250px
       @media screen and (max-width: 767px)
         height: 150px
@@ -912,7 +911,7 @@
       background: linear-gradient(90deg, #8B5CF6 0%, #A78BFA 100%)
     @media screen and (max-width: 767px)
       padding: 18px 30px
-      top: 60px
+      top: 50px
       font-size: 12px
 
 
@@ -1658,17 +1657,17 @@
 
 
   &__img
-    aspect-ratio: 914 / 688
-    @include r(68px)
-    box-shadow: 13.653px 13.653px 0px 0px #F472B6
+    aspect-ratio: 915 / 720
+    //@include r(68px)
+    //box-shadow: 13.653px 13.653px 0px 0px #F472B6
     margin-bottom: 80px
     @media screen and (max-width: 1023px)
-      @include r(40px)
-      box-shadow: 10.24px 10.24px 0px 0px #F472B6
+      //@include r(40px)
+      //box-shadow: 10.24px 10.24px 0px 0px #F472B6
       margin-bottom: 60px
     @media screen and (max-width: 767px)
-      @include r(25px)
-      box-shadow: 5px 5px 0px 0px #F472B6
+      //@include r(25px)
+      //box-shadow: 5px 5px 0px 0px #F472B6
       margin-bottom: 30px
 
 
@@ -1804,6 +1803,10 @@
 .general-corporate
   text-align: center
   background-image: url("../../images/general-corporate/bg.svg")
+  background-size: cover
+  @media screen and (max-width: 767px)
+    background-image: url("../../images/general-corporate/bg-2.svg")
+
 
   &__title
     margin-bottom: 50px
