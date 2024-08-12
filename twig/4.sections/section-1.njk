@@ -16,6 +16,49 @@
                     </a>
                 {% endfor %}
             </div>
+            <div class="{{_}}__body">
+                <div class="{{_}}__item">
+                    <h2 class="{{ _ }}__title h1 color--pink">
+                        Вебкам модель
+                    </h2>
+                    <div class="{{_}}__block">
+                        <div class="{{_}}__search">
+                            <div class="{{_}}__block-title">
+                                Мы ищем
+                            </div>
+                            
+                            
+                            {% set  list = [
+                                'Возраст от 18 до 35 лет',
+                                'Приятная внешность',
+                                'Эмоциональных и открытых',
+                                'Желающих хорошо зарабатывать',
+                                'Смелых и активных']
+                            %}
+                                
+
+                            <ul class="{{_}}__list ul">
+                                {% for item in list %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        
+                        </div>
+                        <div class="{{_}}__reseption">
+                            <div class="{{_}}__block-title">
+                                ВЫ ПОЛУЧАЕТЕ
+                            </div>
+
+                        </div>
+                        <div class="{{_}}__photo">
+                        
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn--yellow btn--shadow">Заполнить анкету</a>
+                </div>
+
+            </div>
+
         </div>
     </div>
 </div>

@@ -47,10 +47,8 @@
     box-shadow: 0px 0px 0px -5px rgba($pink, 1)
     border-radius: 35px
     @media screen and (max-width: 1023px)
-    	margin-bottom: 20px
-    
-    	
-    
+      margin-bottom: 20px
+
 
     &:hover
       box-shadow: 15px 15px 0px -5px rgba($pink, 1)
@@ -160,13 +158,10 @@
 
   &__title
     margin-bottom: 6vw
-    
+
   &__slider
     @media screen and (max-width: 1023px)
-    	padding-bottom: 45px
-    
-    	
-    
+      padding-bottom: 45px
 
 
   &__wrap
@@ -213,9 +208,6 @@
   position: relative
   @media screen and (max-width: 1023px)
     background-image: url("../../images/general-why/bg-2.svg")
-
-
-
 
 
   &__img
@@ -478,10 +470,8 @@
     img
       @include r(50px)
       @media screen and (max-width: 1279px)
-      	@include r(25px)
-      
-      	
-      
+        @include r(25px)
+
 
   .slick-next
     right: -75px
@@ -517,10 +507,9 @@
 
 .general-reviews-slider
   @media screen and (max-width: 1023px)
-  	padding-bottom: 45px
-  
-  	
-  
+    padding-bottom: 45px
+
+
   &__item
     width: 560px
     min-height: 480px
@@ -632,9 +621,6 @@
       margin-top: 200px
     @media screen and (max-width: 767px)
       margin-top: 60px
-
-
-
 
 
   &__content
@@ -932,7 +918,7 @@
 
   &__third-slide
     .h1
-    white-space: nowrap
+      white-space: nowrap
     background-image: url("../../images/general-banner-slider/bg-2.svg")
     background-size: cover
     @media screen and (max-width: 1919px)
@@ -1314,7 +1300,6 @@
       padding-bottom: 15px
 
 
-
   span
     width: 23px
     height: 17px
@@ -1380,19 +1365,72 @@
   background-image: url("../../images/general-vacancy/bg.svg")
   background-size: cover
   display: none
+  @media screen and (max-width: 1279px)
+    display: block
+
+
+
+
+
 
   &__head
     display: flex
     flex-wrap: wrap
     gap: 10px 30px
     justify-content: center
+    max-width: 700px
+    margin: 0 auto 80px
 
   &__head-item
-    font-size: 32px
-    padding: 27px 40px
     background-color: #F086A9
     color: $yellow
     @include r(1966px)
+    @extend %fc
+    height: 78px
+    padding: 0 40px
+    font-size: 32px
+
+
+  &__title
+    text-align: center
+
+
+  &__item .btn
+    width: 100%
+    font-size: 33px
+    line-height: 1
+
+
+  &__block
+    margin-bottom: 54px
+
+
+  &__block-title
+    font-size: 54px
+    color: $yellow
+    @extend %up
+    margin-bottom: 54px
+
+
+  &__search
+    padding: 80px 55px
+    background-color: $violet
+    @include r(68px 68px 0 0)
+
+  &__reseption
+    padding: 80px 55px
+    background-color: $pink
+    @include r(0 0 68px 68px)
+
+
+  &__list
+    color: $white
+    font-size: 32px
+    margin-bottom: 0
+    li
+      padding-left: 40px
+      &:before
+        top: 13px
 
 
 .fancybox-navigation .fancybox-button
