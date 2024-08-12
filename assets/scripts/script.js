@@ -104,7 +104,7 @@ $(document).ready(function () {
             var $slider = $('.general-love__list')
 
 
-            if ($(window).width() <= 1280) {
+            if ($(window).width() < 1280) {
                 $slider.slick()
             } else if ($(window).width() >= 1024 && $slider.hasClass('slick-initialized')) {
                 $slider.slick('unslick')

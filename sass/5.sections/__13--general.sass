@@ -3,6 +3,7 @@
   background-size: cover
   position: relative
   overflow: hidden
+  background-position: center
 
   &__title
     margin-bottom: 100px
@@ -472,8 +473,6 @@
     animation-fill-mode: both
     animation-iteration-count: infinite
     transform-origin: center center
-    @media screen and (max-width: 1439px)
-      right: 100px
     @media screen and (max-width: 1279px)
       display: none
 
@@ -503,7 +502,7 @@
   height: 580px
   position: relative
   @include r(50px)
-  box-shadow: 15px 15px 0px -5px rgba($yellow, 1)
+  box-shadow: 15px 15px 0px -5px rgba($violet, 1)
   @media screen and (max-width: 767px)
     @include r(25px)
     box-shadow: 10px 10px 0px -5px rgba($violet, 1)
@@ -558,7 +557,7 @@
     right: -75px
     @media screen and (max-width: 1023px)
       right: 25px
-    @media screen and (max-width: 767px)
+    @media screen and (max-width: 1023px)
       right: -50px
 
 
@@ -566,7 +565,7 @@
     left: -75px
     @media screen and (max-width: 1023px)
       left: 25px
-    @media screen and (max-width: 767px)
+    @media screen and (max-width: 1023px)
       left: -50px
 
 .general-reviews
@@ -902,7 +901,7 @@
     @extend %font
     @media screen and (max-width: 1279px)
       position: absolute
-      top: 4vw
+      top: 90px  
       color: $yellow
       display: flex
       align-items: center
@@ -927,7 +926,7 @@
   &__social
     display: flex
     gap: 10px
-    margin-bottom: 2vw 
+    margin-bottom: 2vw
     @media screen and (max-width: 1023px)
       justify-content: center
 
