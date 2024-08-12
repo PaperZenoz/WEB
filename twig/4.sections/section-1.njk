@@ -85,11 +85,12 @@
             <div class="{{ _ }}__img img">
                 <img src="images/{{ _ }}/1.png" alt=""/>
             </div>
-            <h2 class="{{_}}__title h1 color--yellow">
+            <h2 class="{{ _ }}__title h1 color--yellow">
                 Школа моделей
             </h2>
-            <div class="{{_}}__text">
-                <p>Даем хороший заработок уже на старте. <br> Мы разработали программу для моделей без опыта, с гарантией
+            <div class="{{ _ }}__text">
+                <p>Даем хороший заработок уже на старте. <br> Мы разработали программу для моделей без опыта, с
+                    гарантией
                     заработка от 60 000 рублей в первый месяц.  </p>
 
 
@@ -101,6 +102,37 @@
             </div>
 
             <a href="#" class="btn btn--yellow btn--shadow">Узнать больше</a>
+
+        </div>
+    </div>
+</div>
+
+
+{% set  _ = 'general-interview' %}
+<div class="{{ _ }} section">
+    <div class="container">
+        <div class="{{ _ }}__wrap">
+            <h2 class="{{ _ }}__title h1 color--yellow">Прийди на собеседование в течении 24 часов </h2>
+            <div class="{{ _ }}__subtitle">
+                И получи гарантированный бонус 10 000 р. к первой зарплате!
+            </div>
+
+            <form action="#" class="{{ _ }}__form">
+                <input type="text" placeholder="Ваше имя*" class="input input--white">
+                <input type="text" placeholder="Номер телефона*" class="input input--white">
+                <input type="text" placeholder="Никнейм Telegram" class="input input--white">
+                <label>
+                    <input type="checkbox" class="{{ _ }}__checkbox checkbox checkbox--second">
+                    <div class="checkbox-label">Я девушка и мне больше 18 лет</div>
+                </label>
+
+
+                <label>
+                    <input type="checkbox" class="{{ _ }}__checkbox checkbox checkbox--second">
+                    <div class="checkbox-label" style="margin-bottom: 0"> Я согласна с <a href="#">Политикой в отношении обработки персональных данных</a></div>
+                </label>
+                <button class="btn btn--yellow btn--shadow">Стань моделью</button>
+            </form>
 
         </div>
     </div>

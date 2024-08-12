@@ -19,6 +19,7 @@
     @media screen and (max-width: 767px)
       font-size: 20px
       margin-bottom: 30px
+      max-width: 300px
 
   &__list
     display: grid
@@ -95,6 +96,7 @@
 
 
     @media screen and (max-width: 767px)
+      max-width: 180px
       font-size: 14px
 
 
@@ -183,7 +185,7 @@
     margin: 0 auto
     @media screen and (max-width: 1279px)
       aspect-ratio: 604 / 802
-      box-shadow: 15px 15px 0px -5px rgba($yellow, 1)
+      box-shadow: 10px 10px 0px -5px rgba($yellow, 1)
     @media screen and (max-width: 767px)
       @include r(25px)
 
@@ -192,8 +194,8 @@
 
   .slick-slide
     opacity: 0.5
-
-  .slick-center
+ 
+  .slick-current
     opacity: 1
 
   .slick-next
@@ -411,6 +413,9 @@
       font-size: 40px
     @media screen and (max-width: 767px)
       font-size: 20px
+      max-width: 310px
+      margin-left: auto
+      margin-right: auto
 
 
   &__subtitle
@@ -533,6 +538,7 @@
     @media screen and (max-width: 767px)
       width: 100%
       min-height: 400px
+      padding: 30px 35px
 
   &__user
     display: flex
@@ -614,6 +620,8 @@
   @media screen and (max-width: 1279px)
     background-image: url("../../images/general-about/bg-2.svg")
     padding-bottom: 100px
+  @media screen and (max-width: 767px)
+    padding-bottom: 40px
 
 
   &__wrap
@@ -631,6 +639,8 @@
 
     @media screen and (max-width: 1279px)
       grid-template-columns: 1fr
+    @media screen and (max-width: 767px)
+      gap: 25px
 
 
   &__head
@@ -666,6 +676,8 @@
     @media screen and (max-width: 1279px)
       margin-bottom: 50px
       justify-content: center
+    @media screen and (max-width: 767px)
+      margin-bottom: 20px
 
 
   &__video
@@ -689,9 +701,9 @@
 
     img
       @include r(50px)
-      box-shadow: 15px 15px 0px -5px rgba($blue-light, 1)
+      box-shadow: 10px 10px 0px -5px rgba($blue-light, 1)
       @media screen and (max-width: 1023px)
-        box-shadow: 15px 15px 0px -5px rgba($yellow, 1)
+        box-shadow: 10px 10px 0px -5px rgba($yellow, 1)
 
 
     + span
@@ -735,7 +747,7 @@
     @media screen and (max-width: 767px)
       h2
         font-size: 20px
-        top: -150px
+        top: -110px
 
     p
       @media screen and (max-width: 1279px)
@@ -756,6 +768,7 @@
         font-size: 24px
 
       @media screen and (max-width: 767px)
+        margin-top: 25px
         font-size: 12px
 
 .general-contacts
@@ -796,6 +809,9 @@
       padding: 15px 30px
       background-color: rgba($white, 0.5)
       @include r(20px)
+    @media screen and (max-width: 767px)
+      padding: 12px 22px
+      font-size: 12px
 
 
   &__tel
@@ -814,18 +830,26 @@
       padding: 15px 30px
       @include r(110px)
       background-color: $blue-light
+    @media screen and (max-width: 767px)
+      padding: 18px 30px
+      top: 60px
+      font-size: 12px
 
 
   &__logo
     @media screen and (max-width: 1279px)
       display: flex
       justify-content: flex-end
+    @media screen and (max-width: 767px)
+      svg
+        width: 68px
 
 
   &__social
     display: flex
     gap: 10px
     margin-bottom: 2vw
+    justify-content: center
 
     a
       @extend %fc
@@ -934,6 +958,7 @@
 
     .h1
       white-space: nowrap
+
   &__main
     display: flex
     align-items: center
@@ -1541,11 +1566,6 @@
     display: block
 
 
-
-
-
-
-
   &__title
     text-align: left
     @media screen and (max-width: 1279px)
@@ -1583,6 +1603,181 @@
         font-size: 24px
       @media screen and (max-width: 767px)
         font-size: 12px
+
+
+  .btn
+    width: 100%
+    font-size: 33px
+    line-height: 1
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+    @media screen and (max-width: 767px)
+      font-size: 12px
+
+
+.general-interview
+  background-image: url("../../images/general-interview/bg.svg")
+  background-size: cover
+  display: none
+  @media screen and (max-width: 1279px)
+    display: block
+
+
+  &__title
+    text-align: center
+    margin-bottom: 20px
+    @media screen and (max-width: 1023px)
+      font-size: 40px
+      margin-bottom: 40px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      margin-bottom: 20px
+
+
+  &__subtitle
+    color: $white
+    font-size: 32px
+    margin-bottom: 80px
+    max-width: 580px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+      max-width: 460px
+      margin-bottom: 60px
+    @media screen and (max-width: 767px)
+      max-width: 210px
+      margin-bottom: 30px
+      font-size: 12px
+
+
+  &__form
+    position: relative
+
+    .input
+      height: 135px
+      line-height: 135px
+      margin-bottom: 40px
+      font-size: 44px
+      padding: 0 80px
+      @media screen and (max-width: 1023px)
+        height: 95px
+        line-height: 95px
+        margin-bottom: 30px
+        font-size: 24px
+        padding: 0 60px
+      @media screen and (max-width: 767px)
+        height: 50px
+        line-height: 50px
+        margin-bottom: 15px
+        padding: 0 30px
+        font-size: 16px
+
+
+    .btn
+      width: 100%
+      font-size: 33px
+      line-height: 1
+      margin-top: 80px
+      @media screen and (max-width: 1023px)
+        font-size: 24px
+        margin-top: 60px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        margin-top: 30px
+
+
+  &__checkbox
+    + div
+      color: $white
+      font-size: 32px
+      margin-bottom: 70px
+      padding-left: 50px
+      @media screen and (max-width: 1023px)
+        font-size: 24px
+        margin-bottom: 50px
+      @media screen and (max-width: 767px)
+        font-size: 12px
+        padding-left: 30px
+        margin-bottom: 25px
+
+
+      &:before
+        top: 8px
+        @media screen and (max-width: 1023px)
+          top: 4px
+        @media screen and (max-width: 767px)
+          width: 14px
+          height: 14px
+          top: 0
+
+
+      a
+        color: white
+        text-decoration: underline
+
+
+.general-corporate
+  text-align: center
+  background-image: url("../../images/general-corporate/bg.svg")
+
+  &__title
+    margin-bottom: 50px
+    @media screen and (max-width: 1023px)
+      font-size: 40px
+      margin-bottom: 40px
+    @media screen and (max-width: 767px)
+      font-size: 20px
+      margin-bottom: 20px
+
+  &__subtitle
+    color: $white
+    font-size: 32px
+    margin-bottom: 80px
+    margin-left: auto
+    margin-right: auto
+    @media screen and (max-width: 1023px)
+      font-size: 24px
+      max-width: 690px
+      margin-bottom: 60px
+    @media screen and (max-width: 767px)
+      //max-width: 210px
+      margin-bottom: 30px
+      font-size: 12px
+
+
+  &__img
+    aspect-ratio: 1 / 1
+    box-shadow: 13px 13px 0px 0px #A78BFA
+    border-radius: 68px
+    margin-bottom: 80px
+    position: relative
+    @media screen and (max-width: 1023px)
+      box-shadow: 10.24px 10.24px 0px 0px #a78bfa
+    @media screen and (max-width: 767px)
+      box-shadow: 5px 5px 0px 0px #A78BFA
+      @include r(25px)
+      margin-bottom: 30px
+
+
+    &:before
+      content: ''
+      width: 243px
+      height: 165px
+      background-image: url("../../images/general-corporate/1.svg")
+      background-size: contain
+      position: absolute
+      top: -20px
+      left: 40px
+      z-index: 1
+      rotate: -20.33deg
+      transform-origin: left center
+      @media screen and (max-width: 1023px)
+        scale: 0.8
+        left: 20px
+      @media screen and (max-width: 767px)
+        scale: 0.5
 
 
   .btn
