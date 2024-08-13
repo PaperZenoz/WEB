@@ -6,7 +6,8 @@
         <div class="breadcrumbs">
             {% set  list = [
                 'Wmodels',
-                'Галерея'] %}
+                'Галерея',
+                'Новый год 2023'] %}
 
             {% for item in list %}
                 <a href="#" class="breadcrumbs__link">
@@ -17,12 +18,12 @@
     </div>
 
     <div class="container">
-        <h1 class="h1 color--pink text-center">Галерея</h1>
+        <h1 class="h1 color--pink text-center">Новый год 2023</h1>
     </div>
 
 
     {% set  _ = 'gallery' %}
-    <div class="{{ _ }} section">
+    <div class="{{ _ }} section section--no-top">
         <div class="container">
             <div class="{{ _ }}__wrap">
                 {% set  list = [
@@ -38,18 +39,39 @@
                     'Корпоратив на Алтае 2020'] %}
 
                 {% for item in list %}
-                    <a href="gallery-inner.html" class="{{ _ }}__item">
+                    <a href="images/{{ _ }}/{{ loop.index }}.png" data-fancybox="gallery" class="{{ _ }}__item">
                         <div class="{{ _ }}__img img">
                             <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
                         </div>
-                        <div class="{{ _ }}__title">
-                            {{ item }}
-                        </div>
-
                     </a>
                 {% endfor %}
             </div>
         </div>
     </div>
+
+
+
+
+
+    {% set  _ = 'inner-gallery' %}
+    <div id="inner-gallery" class="{{ _ }}">
+        <div class="container">
+            <div class="{{ _ }}__wrap">
+                {% for i in range(1, 27) %}
+                    <img id="image--{{ i }}" class="{{ _ }}__img" src="images/gallery/12.png" alt=""/>
+                {% endfor %}
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
 
 {% endblock content %}

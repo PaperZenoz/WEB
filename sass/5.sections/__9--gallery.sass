@@ -12,6 +12,7 @@
     @media screen and (max-width: 1279px)
       grid-template-columns: repeat(2, 1fr)
     @media screen and (max-width: 767px)
+      grid-gap: 20px
       background-image: none
 
 
@@ -32,26 +33,13 @@
     img
       @include r(50px)
       @media screen and (max-width: 1279px)
-        box-shadow: 15px 15px 0px -5px rgba($blue-light, 1)
+        box-shadow: 10px 10px 0px -5px rgba($blue-light, 1)
         border: 10px solid $violet
 
       @media screen and (max-width: 767px)
         border: 3px solid $violet
         @include r(25px)
 
-
-    &:before
-      content: ''
-      display: block
-      position: absolute
-      right: 0
-      top: 0
-      bottom: 0
-      left: 0
-      @include r(50px)
-      background-color: $violet
-      transform: translate(0px, 0px)
-      @extend %transition
 
 
   &__item
@@ -78,11 +66,8 @@
     img
       @include r(50px)
       @media screen and (max-width: 1023px)
-      	@include r(25px)
-      	
-      
-      	
-      
+        @include r(25px)
+
 
   &__img
     display: none
@@ -119,6 +104,27 @@
   @media screen and (max-width: 1023px)
     width: 30px
     height: 30px
+
+
+.fancybox-toolbar .fancybox-button
+  display: none !important
+
+  &:last-child
+    display: block !important
+
+.fancybox-button--close
+    background-color: $yellow
+    @include r(50%)
+    width: 30px
+    height: 30px
+    position: relative
+    right: 15px
+    top: 15px
+    svg
+      width: 20px
+      height: 20px
+      path
+        fill: $pink
 
 
 input:focus::placeholder

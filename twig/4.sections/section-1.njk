@@ -10,8 +10,9 @@
                     'Модельный скаут',
                     'HR Менеджер'] %}
 
+
                 {% for item in list %}
-                    <a href="#" class="{{ _ }}__head-item">
+                    <a href="#" class="{{ _ }}__head-item  {% if loop.index == 1 %} active{% endif %}">
                         {{ item }}
                     </a>
                 {% endfor %}

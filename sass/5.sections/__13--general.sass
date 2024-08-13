@@ -1335,7 +1335,8 @@
   text-align: center
   display: none
   @media screen and (max-width: 1023px)
-    padding: 45px 20px 50px
+    padding: 45px 20px 50px !important
+    @include r(25px)
 
 
   &__text
@@ -1356,8 +1357,10 @@
     margin-bottom: 30px
 
   .fancybox-close-small
-    right: 25px
-    top: 25px
+    right: 15px
+    top: 15px
+    svg
+      scale: 2
 
   &__social
     display: flex
@@ -1512,6 +1515,11 @@
       padding: 0 15px
       height: 28px
       @include r(720px)
+
+    &.active
+      background-color: $yellow
+      color: $blue
+
 
 
   &__title
