@@ -10,6 +10,7 @@
     @extend %lc
 
     @media screen and (max-width: 1023px)
+      margin-bottom: 50px
       flex-direction: column
       gap: 40px
 
@@ -33,19 +34,10 @@
       height: 380px
 
 
-    &:before
-      content: ''
-      position: absolute
-      left: 0
-      top: 0
-      bottom: 0
-      right: 0
-      background-color: $pink
-      transform: translate(15px, 15px)
-      @include r(50px)
-
     img
       @include r(50px)
+      box-shadow: 10px 10px 0px -5px rgba($pink, 1)
+
 
 
 .diary-inner-check

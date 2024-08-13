@@ -77,6 +77,12 @@
 
     img
       @include r(50px)
+      @media screen and (max-width: 1023px)
+      	@include r(25px)
+      	
+      
+      	
+      
 
   &__img
     display: none
@@ -84,13 +90,8 @@
       width: 100%
 
 
-
-
-
-
   .fancybox-content
     padding: 0
-
 
 
 .fancybox-content
@@ -115,7 +116,9 @@
   width: 50px
   height: 50px
   padding: 0
-
+  @media screen and (max-width: 1023px)
+    width: 30px
+    height: 30px
 
 
 input:focus::placeholder

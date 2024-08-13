@@ -81,7 +81,7 @@
     position: relative
     width: max-content
     height: max-content
-    box-shadow: 15px 15px 0px -5px rgba($pink, 1)
+
     @media screen and (max-width: 1279px)
       width: 100%
 
@@ -102,7 +102,9 @@
     @include r(50px)
     overflow: hidden
     position: relative
+    box-shadow: 10px 10px 0px -5px rgba($pink, 1)
     @media screen and (max-width: 1279px)
+      @include r(25px)
       iframe
         aspect-ratio: 1 / 1 !important
         width: 100% !important

@@ -112,6 +112,12 @@ $(document).ready(function () {
         }
 
 
+        $('[data-fancybox]').fancybox({
+            touch: false,
+            autoFocus: false
+        });
+
+
         function general_banner() {
             $('.general-banner-slider').slick({
                 arrows: true,

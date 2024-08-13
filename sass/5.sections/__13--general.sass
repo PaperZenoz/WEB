@@ -1166,7 +1166,7 @@
 
 
     .btn
-      //margin-top: 0px 
+      //margin-top: 0px
       @media screen and (max-width: 1279px)
         width: auto
         min-width: auto
@@ -1615,10 +1615,9 @@
 
 
 .fancybox-navigation .fancybox-button
-  //opacity: 1
-  //visibility: visible
   background-image: url("data:image/svg+xml,%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25 0C11.225 0 0 11.225 0 25C0 38.775 11.225 50 25 50C38.775 50 50 38.775 50 25C50 11.225 38.775 0 25 0ZM31.975 26.325L23.15 35.15C22.775 35.525 22.3 35.7 21.825 35.7C21.35 35.7 20.875 35.525 20.5 35.15C19.775 34.425 19.775 33.225 20.5 32.5L28 25L20.5 17.5C19.775 16.775 19.775 15.575 20.5 14.85C21.225 14.125 22.425 14.125 23.15 14.85L31.975 23.675C32.725 24.4 32.725 25.6 31.975 26.325Z' fill='%23FFFF33'/%3E%3C/svg%3E%0A")
   background-color: transparent
+  background-size: contain
   filter: brightness(200)
   @extend %transition
 
@@ -1642,6 +1641,29 @@
     left: 4vw
 
 
+.fancybox-content
+  @media screen and (max-width: 1023px)
+    padding: 0
+    overflow: visible
+
+
+.fancybox-infobar
+  color: $white
+  mix-blend-mode: inherit
+
+
+.fancybox-navigation .fancybox-button
+  @media screen and (max-width: 1023px)
+    top: calc(50% - 25px)
+
+
+.fancybox-button.fancybox-close-small
+  @media screen and (max-width: 1023px)
+    width: 30px
+    height: 30px
+    //top: -45px
+
+
 .general-school
   background-image: url("../../images/general-school/bg.svg")
   background-size: cover
@@ -1660,16 +1682,10 @@
 
   &__img
     aspect-ratio: 915 / 720
-    //@include r(68px)
-    //box-shadow: 13.653px 13.653px 0px 0px #F472B6
     margin-bottom: 80px
     @media screen and (max-width: 1023px)
-      //@include r(40px)
-      //box-shadow: 10.24px 10.24px 0px 0px #F472B6
       margin-bottom: 60px
     @media screen and (max-width: 767px)
-      //@include r(25px)
-      //box-shadow: 5px 5px 0px 0px #F472B6
       margin-bottom: 30px
 
 
@@ -1811,9 +1827,6 @@
     display: block
 
 
-
-
-
   @media screen and (max-width: 767px)
     background-image: url("../../images/general-corporate/bg-2.svg")
 
@@ -1884,3 +1897,9 @@
       font-size: 24px
     @media screen and (max-width: 767px)
       font-size: 12px
+
+
+
+
+.secret
+  min-height: 100vh
