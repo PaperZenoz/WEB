@@ -1,6 +1,13 @@
 .background
   background-size: cover
+  background-position: center
   padding-top: 125px
+  @media screen and (max-width: 1023px)
+  	padding-top: 75px
+  	
+  
+  	
+  
   &--violet
     background: #a78bfa
 
@@ -34,6 +41,14 @@
 
   &--contacts
     background-image: url("../../images/contacts/bg.svg")
+    @media screen and (max-width: 767px)
+      background-image: url("../../images/contacts/bg-2.svg")
+
+
+
+
+
+
 
   &--questions
     background-image: url("../../images/questions/bg.svg")
