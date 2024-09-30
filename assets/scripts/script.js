@@ -6,6 +6,44 @@ $(window).on("load", function () {
 
 
 $(document).ready(function () {
+
+
+    function gallery_fancybox() {
+        function buttons_init() {
+            var
+                $content = $('.fancybox-slide--current .fancybox-content'),
+                $left = $content.offset().left,
+                $btn = $('.fancybox-button'),
+                $prev_btn = $('.fancybox-button--arrow_left'),
+                $next_btn = $('.fancybox-button--arrow_right'),
+                $btn_side = $prev_btn.height(),
+                $close_btn = $('.fancybox-toolbar'),
+                $infobar = $('.fancybox-infobar'),
+                $close_btn_top = $content.offset().top - $infobar.offset().top
+
+            $prev_btn.css("left", $left - $btn_side - 20);
+            $next_btn.css("right", $left - $btn_side - 20);
+            $close_btn.css("right", $left - $btn_side - 20);
+            $close_btn.css("top", $close_btn_top);
+            $btn.css("top", "calc(50% - " + $btn_side / 2 + "px)");
+        }
+
+        $(function () {
+            $("[data-fancybox]").fancybox({
+                afterShow: function () {
+                    buttons_init()
+                }
+            });
+        });
+
+        $(window).resize(function () {
+            buttons_init()
+        });
+    }
+
+    gallery_fancybox()
+
+
     function questions() {
         $('.questions__head').on('click', function () {
             $(this).toggleClass('open')
@@ -44,7 +82,6 @@ $(document).ready(function () {
             e.preventDefault()
             $contacts.removeClass('open')
         })
-
 
 
         $(window).scroll(function () {
@@ -195,9 +232,9 @@ $(document).ready(function () {
                 var eh = $(this).outerHeight();
                 var dh = $(document).height();
                 if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-                    $(this).find('.vacancy__img').css("transform", "translateX(-50%) scale("+ (1 + $(window).scrollTop() * 0.00004)  +")");
+                    $(this).find('.vacancy__img').css("transform", "translateX(-50%) scale(" + (1 + $(window).scrollTop() * 0.00004) + ")");
                 }
-            }) 
+            })
         });
     }
 

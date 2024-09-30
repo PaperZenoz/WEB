@@ -39,9 +39,17 @@
                     'Корпоратив на Алтае 2020'] %}
 
                 {% for item in list %}
-                    <a href="images/{{ _ }}/{{ loop.index }}.png" data-fancybox="gallery" class="{{ _ }}__item">
+                    <a{% if loop.index == 2 %} href="images/{{ _ }}/1.jpg" {% else %} href="images/{{ _ }}/{{ loop.index }}.png" {% endif %}data-fancybox="gallery" class="{{ _ }}__item">
                         <div class="{{ _ }}__img img">
-                            <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+
+
+
+                            {% if loop.index == 2 %}
+                                <img src="images/{{ _ }}/1.jpg" alt=""/>
+                            {% else %}
+                                <img src="images/{{ _ }}/{{ loop.index }}.png" alt=""/>
+                            {% endif %}
+
                         </div>
                     </a>
                 {% endfor %}
