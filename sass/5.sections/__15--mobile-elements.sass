@@ -27,15 +27,27 @@
     transform-box: fill-box
     transform-origin: 50% 50%
     animation: mobile-elements-wiggle 2s linear infinite
+    &.cherry
+      animation: mobile-elements-cherry 2s linear infinite
+
 
 
 @keyframes mobile-elements-wiggle
   0%
-    transform: rotate(60deg)
+    transform: rotate(45deg)
   50%
     transform: rotate(5deg)
   100%
-    transform: rotate(60deg)
+    transform: rotate(45deg)
+
+
+@keyframes mobile-elements-cherry
+  0%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(-20deg)
+  100%
+    transform: rotate(0deg)
 
 
 

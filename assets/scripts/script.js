@@ -161,7 +161,7 @@ $(document).ready(function () {
                 dots: true,
                 adaptiveHeight: true,
                 infinite: true,
-                autoplay: true,
+                // autoplay: true,
                 responsive: [
                     {
                         breakpoint: 1280,
