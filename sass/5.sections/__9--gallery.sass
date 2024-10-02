@@ -95,12 +95,22 @@
     fill: $pink
 
 
+.fancybox-content
+  margin: 0 60px
+
+
+
+
+.fancybox-button, .fancybox-toolbar
+  transition: all ease .3s !important
+
 .fancybox-navigation .fancybox-button
   background: white
   @include r(50%)
   width: 50px
   height: 50px
   padding: 0
+
   @media screen and (max-width: 1023px)
     width: 30px
     height: 30px
@@ -118,8 +128,8 @@
     width: 30px
     height: 30px
     position: relative
-    right: 15px
-    top: 15px
+    right: 0px
+    top: 0px 
     svg
       scale: 1.5
       path
